@@ -55,8 +55,8 @@ Output a single line with an integer indicating the maximum number of students i
 8
 
 ### Sample Input 3
-4
-3 BFS DFS DIJKSTRA
+4``
+3 BFS DFS DIJKSTRA``
 4 BFS DFS LCA RMQ
 3 DIJKSTRA BFT DFS
 3 FLOYD DFS BFS
