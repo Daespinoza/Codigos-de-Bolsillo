@@ -41,6 +41,7 @@ Output a single line with an integer indicating the maximum number of students i
 
 ### Sample Input 1
 1
+
 3 DFS BFS DIJKSTRA
 
 ### Sample Output 1
@@ -48,17 +49,23 @@ Output a single line with an integer indicating the maximum number of students i
 
 ### Sample Input 2
 2
+
 4 BFS DFS LCA RMQ
+
 2 PRIM KRUSKAL
 
 ### Sample Output 2
 8
 
 ### Sample Input 3
-4``
-3 BFS DFS DIJKSTRA``
+4
+
+3 BFS DFS DIJKSTRA
+
 4 BFS DFS LCA RMQ
+
 3 DIJKSTRA BFT DFS
+
 3 FLOYD DFS BFS
 
 ### Sample Output 3
@@ -66,6 +73,7 @@ Output a single line with an integer indicating the maximum number of students i
 
 ### Sample Input 4
 1
+
 1 HAVEFUN
 
 ### Sample Output 4
@@ -73,8 +81,11 @@ Output a single line with an integer indicating the maximum number of students i
 
 ### Sample Input 5
 3
+
 4 FFEK DANTZING DEMOUCRON FFT
+
 4 PRIM KRUSKAL LCA FLOYD
+
 4 DFS BFS DIJKSTRA RMQ
 
 ### Sample Output 5
