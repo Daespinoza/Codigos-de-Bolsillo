@@ -39,7 +39,7 @@ La primera línea contiene un número entero N (1 <= N <= 100) que indica el nú
 
 Salida una sola línea con un número entero que indica el número máximo de estudiantes en un equipo en el que cada estudiante pueda cooperar con los demás.
 
-## Kotlin
+## Solución en Kotlin
 
 Explicación del Código Kotlin:
 1. Función `maxCooperatingStudents`:
@@ -94,7 +94,7 @@ fun main() {
 }
 ```
 
-## Python 3
+## Solución en Python 3
 
 Explicación del Código Python 3:
 
@@ -109,7 +109,7 @@ Explicación del Código Python 3:
    - Lee la entrada desde stdin y la procesa en una lista de listas.
    - Llama a la función max_cooperating_students y imprime el resultado.
 
-  Código:
+Código:
 ```python3
 def max_cooperating_students(teachers):
     from itertools import combinations
@@ -160,4 +160,172 @@ if __name__ == "__main__":
     print(max_cooperating_students(teachers))
 ```
 
-   
+## Solución en C
+
+Explicación del Código C:
+
+1. Función max_cooperating_students:
+   - Crea subconjuntos de algoritmos que cada profesor puede enseñar.
+   - Utiliza bits para generar todas las combinaciones posibles de algoritmos.
+   - Añade cada subconjunto a la lista `sets`.
+2. Bucle principal para calcular el número máximo de estudiantes:
+   - Compara cada subconjunto de algoritmos para asegurarse de que los estudiantes pueden cooperar (es decir, que no comparten algoritmos en común).
+   - Actualiza `max_students` con el número máximo de estudiantes cooperativos.
+3. Función main:
+   - Lee la entrada desde stdin y la procesa en matrices.
+   - Llama a la función `max_cooperating_students` y imprime el resultado.
+
+Código:
+```c
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+#define MAX_ALGORITHMS 10
+#define MAX_TEACHERS 100
+#define MAX_LENGTH 11
+
+int max_cooperating_students(int N, int A[], char algorithms[][MAX_ALGORITHMS][MAX_LENGTH]) {
+    int max_students = 0;
+    int sets[1024][MAX_ALGORITHMS], set_sizes[1024], num_sets = 0;
+    
+    // Crear subconjuntos de algoritmos que cada profesor puede enseñar
+    for (int t = 0; t < N; ++t) {
+        int a = A[t];
+        for (int i = 1; i < (1 << a); ++i) {
+            set_sizes[num_sets] = 0;
+            for (int j = 0; j < a; ++j) {
+                if (i & (1 << j)) {
+                    strcpy(sets[num_sets][set_sizes[num_sets]++], algorithms[t][j]);
+                }
+            }
+            ++num_sets;
+        }
+    }
+    
+    // Encontrar el número máximo de estudiantes que pueden cooperar
+    for (int i = 0; i < num_sets; ++i) {
+        int count = 1;
+        for (int j = i + 1; j < num_sets; ++j) {
+            int cooperative = 1;
+            for (int k = 0; k < set_sizes[i]; ++k) {
+                for (int l = 0; l < set_sizes[j]; ++l) {
+                    if (strcmp(sets[i][k], sets[j][l]) == 0) {
+                        cooperative = 0;
+                        break;
+                    }
+                }
+                if (!cooperative) break;
+            }
+            if (cooperative) ++count;
+        }
+        if (count > max_students) max_students = count;
+    }
+    
+    return max_students;
+}
+
+int main() {
+    int N;
+    scanf("%d", &N);
+    
+    int A[MAX_TEACHERS];
+    char algorithms[MAX_TEACHERS][MAX_ALGORITHMS][MAX_LENGTH];
+    
+    // Leer la entrada
+    for (int i = 0; i < N; ++i) {
+        scanf("%d", &A[i]);
+        for (int j = 0; j < A[i]; ++j) {
+            scanf("%s", algorithms[i][j]);
+        }
+    }
+    
+    int result = max_cooperating_students(N, A, algorithms);
+    printf("%d\n", result);
+    
+    return 0;
+}
+```
+
+## Solución en C++
+
+Explicación del Código C++:
+
+1. Función `max_cooperating_students`:
+   - Crea subconjuntos de algoritmos que cada profesor puede enseñar.
+   - Utiliza bits para generar todas las combinaciones posibles de algoritmos.
+   - Añade cada subconjunto a la lista `sets`.
+2. Bucle principal para calcular el número máximo de estudiantes:
+   - Compara cada subconjunto de algoritmos para asegurarse de que los estudiantes pueden cooperar (es decir, que no comparten algoritmos en común).
+   - Actualiza `max_students` con el número máximo de estudiantes cooperativos.
+3. Función main:
+   - Lee la entrada desde `cin` y la procesa en un vector de vectores.
+   - Llama a la función `max_cooperating_students` y imprime el resultado.
+
+Código:
+```c++
+#include <iostream>
+#include <vector>
+#include <set>
+#include <algorithm>
+
+using namespace std;
+
+int max_cooperating_students(int N, vector<vector<string>> teachers) {
+    vector<set<string>> sets;
+    
+    // Crear subconjuntos de algoritmos que cada profesor puede enseñar
+    for (int t = 0; t < N; ++t) {
+        int A = teachers[t].size();
+        for (int i = 1; i < (1 << A); ++i) {
+            set<string> subset;
+            for (int j = 0; j < A; ++j) {
+                if (i & (1 << j)) {
+                    subset.insert(teachers[t][j]);
+                }
+            }
+            sets.push_back(subset);
+        }
+    }
+    
+    int max_students = 0;
+    // Encontrar el número máximo de estudiantes que pueden cooperar
+    for (int i = 0; i < sets.size(); ++i) {
+        int count = 1;
+        for (int j = i + 1; j < sets.size(); ++j) {
+            bool cooperative = true;
+            for (const auto& algo : sets[i]) {
+                if (sets[j].count(algo)) {
+                    cooperative = false;
+                    break;
+                }
+            }
+            if (cooperative) ++count;
+        }
+        max_students = max(max_students, count);
+    }
+    
+    return max_students;
+}
+
+int main() {
+    int N;
+    cin >> N;
+    vector<vector<string>> teachers(N);
+    
+    // Leer la entrada
+    for (int i = 0; i < N; ++i) {
+        int A;
+        cin >> A;
+        teachers[i].resize(A);
+        for (int j = 0; j < A; ++j) {
+            cin >> teachers[i][j];
+        }
+    }
+    
+    int result = max_cooperating_students(N, teachers);
+    cout << result << endl;
+    
+    return 0;
+}
+```
