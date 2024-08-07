@@ -39,6 +39,62 @@ La primera línea contiene un número entero N (1 <= N <= 100) que indica el nú
 
 Salida una sola línea con un número entero que indica el número máximo de estudiantes en un equipo en el que cada estudiante pueda cooperar con los demás.
 
+## Pseudocódigo
+
+Explicación del Pseudocódigo
+1. Función max_cooperating_students:
+   - Entrada: Lista de profesores, donde cada profesor tiene una lista de algoritmos que conoce.
+   - Proceso:
+      - Para cada profesor, se generan todos los subconjuntos posibles de algoritmos que el profesor puede enseñar.
+      - Se almacenan estos subconjuntos en una lista sets.
+   - Salida: Número máximo de estudiantes que pueden cooperar entre sí.
+2. Generación de Subconjuntos:
+   - Utiliza la técnica de generación de subconjuntos usando bits (bitmasking). Para cada subconjunto posible, añade los algoritmos correspondientes al subconjunto.
+3. Cálculo del Número Máximo de Estudiantes Cooperativos:
+   - Compara cada conjunto con todos los demás conjuntos para verificar que no tienen elementos comunes (es decir, que pueden cooperar).
+   - Mantiene un contador count para rastrear el número de estudiantes cooperativos.
+   - Actualiza el número máximo de estudiantes cooperativos max_students.
+4. Función Principal:
+   - Entrada: Lee el número de profesores y la lista de algoritmos que cada profesor conoce.
+   - Proceso: Llama a max_cooperating_students con la lista de profesores.
+   - Salida: Imprime el resultado.
+
+```pseudo
+función max_cooperating_students(profesores):
+    conjuntos = lista vacía
+
+    para cada profesor en profesores:
+        algoritmos = algoritmos que el profesor conoce
+        A = número de algoritmos que el profesor conoce
+        para i de 1 a 2^A - 1:
+            subconjunto = conjunto vacío
+            para j de 0 a A-1:
+                si i-ésimo bit de i está encendido:
+                    añadir algoritmos[j] a subconjunto
+            añadir subconjunto a conjuntos
+
+    max_estudiantes = 0
+
+    para cada conjunto en conjuntos:
+        cuenta = 1
+        para cada otro conjunto en conjuntos:
+            si conjunto y otro_conjunto no tienen elementos comunes:
+                incrementar cuenta
+        actualizar max_estudiantes con el máximo de cuenta y max_estudiantes
+
+    retornar max_estudiantes
+
+función principal:
+    leer N (número de profesores)
+    inicializar lista de profesores
+    para cada profesor:
+        leer A (número de algoritmos)
+        leer algoritmos que el profesor conoce
+        añadir lista de algoritmos a lista de profesores
+    llamar a max_cooperating_students con la lista de profesores
+    imprimir el resultado
+```
+
 ## Solución en Kotlin
 
 Explicación del Código Kotlin:
