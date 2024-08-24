@@ -105,6 +105,7 @@ Output a single line with an integer indicating the maximum number of students i
  
  ### Sample input 1
  1
+ 
  0 1
  
  ### Sample output 1
@@ -112,7 +113,9 @@ Output a single line with an integer indicating the maximum number of students i
  
  ### Sample input 2
  2
+ 
  10 4
+ 
  -5 -8
  
  ### Sample output 2
@@ -135,29 +138,50 @@ Output a single line with an integer indicating the maximum number of students i
  
 ### Sample input 1
  5 1 41
+ 
  -10 10 1 -1 -70
+ 
  10
+ 
  2 5 31
+ 
  2 4 30
+ 
  2 4 29
+ 
  2 4 28
+ 
  1 2 20
+ 
  1 2 10
+ 
  1 4 11
+ 
  1 4 10
+ 
  1 4 40
+ 
  1 4 41
  
 ### Sample output 1
  1
+ 
  40
+ 
  39
+ 
  38
+ 
  20
+ 
  11
+ 
  11
+ 
  11
+ 
  40
+ 
  40
  
  On the first scenario the farmer`s net incomes would be [10,1,-1,-70] and they start with a wealth of 31:
