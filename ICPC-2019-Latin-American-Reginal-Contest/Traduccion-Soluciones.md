@@ -385,3 +385,206 @@ int main() {
     return 0;
 }
 ```
+
+# Problema B: Construir la Casa Perfecta
+
+Alicia y Bob tienen 45 años y han pasado cinco años de retiro cuidando de su campo de vegetales. Ir y venir desde su casa en la ciudad hasta el campo se ha vuelto una tarea agotadora, así que han decidido mudarse al campo permanentemente. Actualmente, tienen una cerca perfecta que rodea todas las plantas vegetales (con un perímetro y área mínimos), pero van a derribar la cerca vieja y construir una nueva casa perfecta donde puedan vivir.
+
+Entonces, ¿qué es una casa perfecta? Tiene algunos requisitos:
+
+1. El área de la casa debe ser un cuadrado centrado en el punto del campo con la vista más hermosa (el origen (0,0)).
+2. La casa no puede ser construida sobre ningún vegetal, aunque es posible tener vegetales justo en el borde de la casa.
+
+Alicia y Bob aman los espacios amplios, por lo que tu tarea es determinar el máximo perímetro que puede tener una casa perfecta.
+
+## Entrada
+
+La primera línea contiene un entero N (1 ≤ N ≤ 10,000) indicando el número de plantas de vegetales en el campo de Alicia y Bob.
+Cada una de las siguientes N líneas describe una planta de vegetales con dos enteros X y Y (-10^9 ≤ X, Y ≤ 10^9) que indican las coordenadas de la planta. Ninguna planta está en el punto (0,0) y no hay dos plantas en la misma ubicación.
+
+## Salida
+
+Debes imprimir una única línea con un número que indique el perímetro máximo que puede tener la casa perfecta, con exactamente cuatro dígitos después del punto decimal, redondeado si es necesario. Nota que los lados de la casa no necesitan estar alineados con los ejes de las coordenadas.
+
+## Explicación
+
+Imagina que las plantas de vegetales están representadas por puntos en un plano bidimensional. La casa perfecta será un cuadrado cuyo centro esté en el origen (0,0) y que no cubra ningún vegetal en su interior. Sin embargo, la casa puede tocar los vegetales en su borde. Debemos encontrar el tamaño del cuadrado más grande posible (en términos de perímetro) que cumpla con estas condiciones.
+
+El problema esencialmente se reduce a encontrar la distancia máxima de cualquier vegetal desde el origen, ya que esta determinará el radio del círculo circunscrito alrededor del cuadrado más grande que se pueda construir.
+
+## Pseudocódigo
+
+1. Entrada de Datos:
+   - Leer N (número de vegetales).
+   - Leer las coordenadas (X, Y) de cada vegetal.
+2. Calcular la Distancia:
+   - Para cada vegetal, calcular la distancia euclidiana desde el origen (0, 0) usando la fórmula de distancia: dist = sqrt(X^2 + Y^2).
+3. Encontrar la Distancia Máxima:
+   - Mantener un registro de la distancia máxima encontrada.
+4. Calcular el Perímetro Máximo:
+   - Dado que el cuadrado más grande está circunscrito por un círculo con radio igual a la distancia máxima, el lado del cuadrado es 2 * dist_max / sqrt(2) y el perímetro es 4 * lado.
+   - Alternativamente, usar directamente la relación geométrica que establece que el perímetro del cuadrado es 8 * dist_max.
+5. Salida:
+   - Imprimir el perímetro máximo con 4 dígitos decimales.
+
+```pseudo
+function calcular_perimetro_maximo(N, vegetales):
+    max_distancia = 0
+
+    for cada vegetal (X, Y) en vegetales:
+        # Calcular la distancia euclidiana desde el origen
+        distancia = sqrt(X^2 + Y^2)
+        
+        # Actualizar la distancia máxima
+        if distancia > max_distancia:
+            max_distancia = distancia
+
+    # El perímetro máximo es 8 veces la distancia máxima
+    perimetro_maximo = 8 * max_distancia
+    
+    # Imprimir el resultado con 4 dígitos decimales
+    print("{:.4f}".format(perimetro_maximo))
+
+# Leer la entrada
+N = leer_entero()
+vegetales = leer_lista_de_pares(N)
+
+# Calcular y mostrar el resultado
+calcular_perimetro_maximo(N, vegetales)
+```
+
+### Explicación del Pseudocódigo
+1. calcular_perimetro_maximo(N, vegetales):
+   - Inicializamos una variable max_distancia en 0 para almacenar la distancia más grande desde el origen.
+   - Iteramos a través de todos los vegetales. Para cada vegetal, calculamos la distancia euclidiana desde el origen (0, 0) utilizando la fórmula sqrt(X^2 + Y^2).
+   - Si la distancia calculada es mayor que max_distancia, actualizamos max_distancia.
+   - Una vez procesados todos los vegetales, calculamos el perímetro máximo usando la fórmula perimetro_maximo = 8 * max_distancia y lo imprimimos con 4 dígitos decimales.
+
+### Notas Finales
+   - La complejidad del algoritmo es O(N), donde N es el número de vegetales, ya que estamos procesando cada vegetal una vez.
+   - Este enfoque garantiza que encontramos la mayor distancia y, por lo tanto, el mayor perímetro posible para la casa perfecta que se puede construir en el campo.
+
+# Problema C - Reducir la Desigualdad
+
+Complejidonia no siempre ha sido la tierra pacífica e igualitaria que todos conocemos hoy. Los ricos Constantones eran los dueños de los medios locales y sumieron a Complejidonia en la tiranía de su despiadado sistema económico: el Nlogonialismo, un sistema que promovía una desigualdad extrema que, curiosamente, siempre beneficiaba a los Constantones.
+
+Mientras que los Constantones poseían la mayor parte de la riqueza, los Cuadradones vivían en extrema pobreza, y la desigualdad se justificaba etiquetando a los Cuadradones como perezosos e ineficientes. Los Nlogones generalmente menospreciaban a los Cuadradones, a pesar de trabajar tanto como ellos, creyendo que estaban mejor gracias a su mezcla de trabajo duro y astucia. Para los Cubiones y Cuaterniones era aún peor, ya que, al provenir de países vecinos, se les veía como criminales y, al mismo tiempo, se les acusaba de robar empleos en Complejidonia.
+
+Todo cambió después de que el Congreso Internacional Colectivista y Popular (ICPC) logró derrocar a los Constantones e instaurar un nuevo sistema económico, un sistema que se esfuerza por la equidad y que tiene en cuenta que cada habitante puede pasar por buenos y malos períodos económicos en la vida.
+
+En el nuevo sistema se estableció un límite superior U sobre cuánta riqueza puede acumular una persona y un límite inferior L que representa la riqueza mínima requerida para que una persona mantenga un estilo de vida decente. Al final de cada mes, cada habitante evalúa su riqueza. Aquellos con más de U donarán el excedente al ICPC, mientras que aquellos que tengan menos de L recibirán lo necesario del ICPC para alcanzar el límite inferior establecido.
+
+Los Cuadradones, que son muy buenos agricultores, necesitan tu ayuda para gestionar sus finanzas. La larga era del Nlogonialismo ha dañado gravemente el medio ambiente y ahora el clima en Complejidonia es muy volátil. Esto tiene un gran impacto en su agricultura, que fluctúa entre períodos buenos y malos.
+
+Un agricultor lleva un registro largo A1, A2, ..., An de sus ingresos netos (ingresos menos gastos) durante una secuencia de N meses. Basado en estos datos, el agricultor quiere planificar cómo invertir su riqueza para evitar ser una carga para el ICPC en el futuro. El agricultor quiere saber, dado un valor inicial de riqueza X al comienzo de un mes B, cuánto poseerá al final del mes E (teniendo en cuenta que al final de cada mes puede donar o recibir una donación para asegurarse de que su riqueza esté entre L y U, inclusive).
+
+## Entrada
+   - La primera línea contiene tres enteros N (1 ≤ N ≤ 10^5), L y U (1 ≤ L ≤ U ≤ 2 * 10^6), indicando respectivamente el número de meses para los cuales el agricultor tiene registros de ingresos netos, el límite inferior de riqueza y el límite superior de riqueza.
+   - La segunda línea contiene N enteros A1, A2, ..., An (-10^6 ≤ Ai ≤ 10^6 para i = 1, 2, ..., N), donde Ai es el ingreso neto en el mes i.
+   - La tercera línea contiene un entero Q (1 ≤ Q ≤ 10^5) que representa el número de escenarios en los que el agricultor está interesado. Cada una de las siguientes Q líneas describe un escenario con tres enteros B, E (1 ≤ B ≤ E ≤ N) y X (L ≤ X ≤ U), indicando que el agricultor quiere saber cuánto poseerá al final del mes E si comienza con una riqueza de X al inicio del mes B, y cada mes j = B, B + 1, ..., E su ingreso neto es Aj.
+
+## Salida
+   - Imprime Q líneas, cada una con un entero que indica cuánto poseerá el agricultor al final del período descrito en el escenario correspondiente.
+
+## Explicación
+
+El problema presenta una historia ficticia sobre un país llamado Complejidonia, donde se estableció un nuevo sistema económico para garantizar la equidad entre sus habitantes. Este sistema establece límites superiores e inferiores en la riqueza de los individuos. Si alguien tiene más riqueza de la permitida, debe donar el excedente, y si tiene menos, recibe una donación hasta alcanzar el mínimo requerido.
+
+El problema consiste en ayudar a un agricultor a gestionar sus finanzas. Se nos proporciona un registro de ingresos netos durante varios meses. Basándonos en este registro, debemos responder a múltiples consultas que indican, dada una riqueza inicial en un mes específico, cuánto tendrá el agricultor al final de un período determinado.
+
+Para cada consulta, el agricultor quiere saber cuánto poseerá al final del período después de haber ajustado su riqueza de acuerdo con los límites establecidos por el sistema (donando o recibiendo donaciones cuando sea necesario).
+
+## Pseudocódigo
+
+1. Inicialización:
+   - Leer los valores de N, L, U (número de meses, límite inferior y límite superior de riqueza).
+   - Leer la lista de ingresos netos A de longitud N.
+   - Leer el número de consultas Q.
+2. Preprocesamiento:
+   - Calcular el arreglo S que almacena la suma acumulada de los ingresos netos hasta cada mes.
+   - Esto nos permitirá calcular rápidamente la suma de ingresos netos en cualquier intervalo [B, E].
+3. Procesar las consultas:
+   - Para cada consulta:
+      1. Leer los valores de B, E, y X (mes de inicio, mes de fin, y riqueza inicial).
+      2. Calcular la suma de ingresos netos del período [B, E] usando el arreglo de suma acumulada S.
+      3. Determinar la riqueza final sumando la riqueza inicial X y la suma de ingresos netos calculada.
+      4. Ajustar la riqueza final:
+         - Si la riqueza es mayor que el límite superior U, ajustar la riqueza final a U.
+         - Si la riqueza es menor que el límite inferior L, ajustar la riqueza final a L.
+      5. Almacenar el resultado para esta consulta.
+4. Salida:
+   - Imprimir los resultados para todas las consultas.
+
+```pseudo
+INICIO
+
+    // Leer N, L, U
+    LEER N, L, U
+
+    // Leer la lista de ingresos netos A
+    LEER LISTA A DE LONGITUD N
+
+    // Leer el número de consultas Q
+    LEER Q
+
+    // Preprocesamiento: Calcular suma acumulada S
+    CREAR ARREGLO S DE TAMAÑO N + 1
+    S[0] = 0
+    PARA i DESDE 1 HASTA N HACER
+        S[i] = S[i - 1] + A[i - 1]
+    FIN PARA
+
+    // Procesar cada consulta
+    CREAR LISTA resultados VACÍA
+    PARA i DESDE 1 HASTA Q HACER
+        LEER B, E, X
+
+        // Calcular la suma de ingresos netos desde el mes B hasta el mes E
+        suma_ingresos = S[E] - S[B - 1]
+
+        // Calcular la riqueza final
+        riqueza_final = X + suma_ingresos
+
+        // Ajustar la riqueza final según los límites L y U
+        SI riqueza_final > U ENTONCES
+            riqueza_final = U
+        FIN SI
+        SI riqueza_final < L ENTONCES
+            riqueza_final = L
+        FIN SI
+
+        // Guardar el resultado
+        AÑADIR riqueza_final A resultados
+    FIN PARA
+
+    // Imprimir los resultados
+    PARA cada resultado EN resultados HACER
+        IMPRIMIR resultado
+    FIN PARA
+
+FIN
+```
+
+### Explicación del Pseudocódigo
+
+1. Lectura de Entrada:
+   - Se leen los valores N, L, y U, que son el número de meses y los límites de riqueza.
+   - Se lee la lista de ingresos netos A de longitud N.
+   - Se lee el número de consultas Q.
+2. Preprocesamiento (Suma Acumulada):
+   - Se crea un arreglo S para almacenar las sumas acumuladas de los ingresos netos. Esto permite calcular la suma de ingresos en cualquier intervalo [B, E] de manera eficiente.
+   - Se inicializa S[0] a 0, y luego se calcula S[i] como la suma acumulada hasta el mes i.
+3. Procesamiento de Consultas:
+   - Se itera sobre cada consulta y se leen los valores B, E, y X que representan el mes de inicio, el mes de fin, y la riqueza inicial.
+   - Se calcula la suma de ingresos en el intervalo [B, E] restando S[B-1] de S[E].
+   - Se suma esta cantidad a la riqueza inicial X para obtener la riqueza final.
+   - Se ajusta la riqueza final si excede el límite superior U o si está por debajo del límite inferior L.
+   - El resultado se almacena en la lista resultados.
+4. Salida:
+   - Finalmente, se imprimen todos los resultados de las consultas.
+
+### Notas Finales
+
+- El uso del arreglo de sumas acumuladas permite que las consultas sobre intervalos se resuelvan en tiempo constante, haciendo que el algoritmo sea eficiente.
+- Este pseudocódigo es adecuado para manejar las restricciones del problema, con un enfoque en mantener la complejidad del algoritmo dentro de los límites aceptables (O(N + Q)).
+- Asegúrate de que la implementación considere las restricciones de los valores para evitar errores de desbordamiento o cálculos incorrectos.
