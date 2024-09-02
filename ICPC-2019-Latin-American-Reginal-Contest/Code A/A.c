@@ -8,8 +8,7 @@
 
 int max_cooperating_students(int N, int A[], char algorithms[][MAX_ALGORITHMS][MAX_LENGTH]) {
     int max_students = 0;
-    char sets[1024][MAX_ALGORITHMS][MAX_LENGTH];  // Cambiado a array de cadenas de caracteres
-    int set_sizes[1024], num_sets = 0;
+    int sets[1024][MAX_ALGORITHMS], set_sizes[1024], num_sets = 0;
     
     // Crear subconjuntos de algoritmos que cada profesor puede enseñar
     for (int t = 0; t < N; ++t) {
@@ -18,7 +17,7 @@ int max_cooperating_students(int N, int A[], char algorithms[][MAX_ALGORITHMS][M
             set_sizes[num_sets] = 0;
             for (int j = 0; j < a; ++j) {
                 if (i & (1 << j)) {
-                    strcpy(sets[num_sets][set_sizes[num_sets]++], algorithms[t][j]);  // Copiar la cadena de algoritmos
+                    strcpy(sets[num_sets][set_sizes[num_sets]++], algorithms[t][j]);
                 }
             }
             ++num_sets;
@@ -32,7 +31,7 @@ int max_cooperating_students(int N, int A[], char algorithms[][MAX_ALGORITHMS][M
             int cooperative = 1;
             for (int k = 0; k < set_sizes[i]; ++k) {
                 for (int l = 0; l < set_sizes[j]; ++l) {
-                    if (strcmp(sets[i][k], sets[j][l]) == 0) {  // Comparar las cadenas de caracteres
+                    if (strcmp(sets[i][k], sets[j][l]) == 0) {
                         cooperative = 0;
                         break;
                     }
