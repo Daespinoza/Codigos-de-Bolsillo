@@ -1,7 +1,31 @@
+using Microsoft.EntityFrameworkCore;
+using RazorPagesMovie.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+// Configuración de la base de datos según el entorno
+builder.Services.AddDbContext<RazorPagesMovieContext>(options =>
+{
+    var connectionString = builder.Environment.IsDevelopment()
+        ? builder.Configuration.GetConnectionString("RazorPagesMovieContext")
+        : builder.Configuration.GetConnectionString("ProductionMovieContext");
+
+    if (connectionString == null)
+        throw new InvalidOperationException("Connection string not found.");
+
+    // Usar SQLite en desarrollo y SQL Server en producción
+    if (builder.Environment.IsDevelopment())
+    {
+        options.UseSqlite(connectionString);
+    }
+    else
+    {
+        options.UseSqlServer(connectionString);
+    }
+});
 
 var app = builder.Build();
 
@@ -9,7 +33,6 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
