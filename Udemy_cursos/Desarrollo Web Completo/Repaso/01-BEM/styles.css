@@ -1,0 +1,52 @@
+.cards{
+    width: 400px;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid gray;
+    box-shadow: 0px 0px 20px gray;
+    border-radius: 5px;
+}
+
+.cards__card {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    background-color: lightgray;
+    margin: 5px;
+}
+
+.card__title{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card__link{
+    padding: 10px;
+    background: green;
+    color: white;
+    text-decoration: none;
+}
+
+.card__link--rojo{
+    background-color: red;
+}
+
+/*
+    .cards .card {
+        font-family: 'Courier New', Courier, monospace;
+        padding: 10px;
+        background-color: lightgray;
+        margin: 5px;
+    }
+
+    .cards .card h3{
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .cards .card a{
+        padding: 10px;
+        background: green;
+        color: white;
+        text-decoration: none;
+    }
+*/

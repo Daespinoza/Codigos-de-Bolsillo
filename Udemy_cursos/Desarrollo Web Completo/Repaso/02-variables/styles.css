@@ -1,0 +1,53 @@
+/* Definimos las variables en :root */
+:root {
+    --card-bg-color: #f5f5f5;
+    --card-border-color: #ddd;
+    --card-text-color: #333;
+    --link-color: #0066cc;
+    --hover-link-color: #004080;
+}
+
+body {
+    background-color: #eaeaea;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: var(--card-text-color);
+}
+
+h1 {
+    margin-top: 20px;
+    color: var(--card-text-color);
+}
+
+.card {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--card-border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px auto;
+    width: 80%;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: var(--card-text-color);
+    text-align: left;
+}
+
+.card .h2 {
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+.card .p {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.card .a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card .a:hover {
+    color: var(--hover-link-color);
+}

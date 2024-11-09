@@ -1,0 +1,61 @@
+/* Definimos una variable de tamaño base */
+:root {
+    --base-font-size: 16px;
+}
+
+body {
+    font-size: var(--base-font-size); /* Definimos el tamaño base en REM */
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Encabezado con REM */
+h1 {
+    font-size: 2rem; /* Tamaño de fuente 2 veces el tamaño base (32px) */
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Caja con EM para los estilos internos */
+.box {
+    background-color: #ffffff;
+    border: 2px solid #ddd;
+    padding: 1.5em; /* Espaciado interno basado en EM */
+    margin: 0.5rem;
+    width: calc(33.33% - 1rem);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.box h2 {
+    font-size: 1.5em; /* 1.5 veces el tamaño del contenedor (24px si base es 16px) */
+    margin-bottom: 0.5em;
+}
+
+.box p {
+    font-size: 1em; /* Igual al tamaño base del contenedor (.box) */
+    color: #666;
+}
+
+/* En pantallas pequeñas, cambiamos el diseño */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .box {
+        width: 100%; /* Ajustamos el ancho para pantallas pequeñas */
+    }
+}

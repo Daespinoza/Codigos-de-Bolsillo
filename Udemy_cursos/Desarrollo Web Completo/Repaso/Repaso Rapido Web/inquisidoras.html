@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inquisidoras</title>
+</head>
+<body>
+    <h1>Inquisidoras</h1>
+
+    <img src="Imagenes/Inquisidora.jpg" alt="Hermanas del Silencio" width="300">
+
+    <p>Las Inquisidoras son agentes de élite de la Inquisición, autorizadas para actuar en cualquier lugar del Imperio. Luchan contra amenazas como la herejía, la brujería y las fuerzas demoníacas.</p>
+
+    <h2>Órdenes de la Inquisición</h2>
+    <ul>
+        <li>Ordo Hereticus - Combate la herejía y la traición interna.</li>
+        <li>Ordo Xenos - Enfrenta a los alienígenas.</li>
+        <li>Ordo Malleus - Especializada en cazar demonios.</li>
+    </ul>
+
+    <h2>Seleccione su rango de favorita</h2>
+    <form action="/submit_rank" method="POST">
+        <label for="rango">Rango:</label>
+        <select id="rango" name="rango">
+            <option value="iniciada">Iniciada</option>
+            <option value="interrogadora">Interrogadora</option>
+            <option value="inquisidora">Inquisidora</option>
+        </select><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <a href="index.html">Volver al índice</a>
+</body>
+</html>
