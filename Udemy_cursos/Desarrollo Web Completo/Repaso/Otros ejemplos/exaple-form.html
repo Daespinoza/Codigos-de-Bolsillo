@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+</head>
+<body>
+
+    <h1>Formulario de Contacto</h1>
+    <form action="/enviar-datos" method="POST">
+        
+        <!-- Nombre -->
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+        
+        <br><br>
+
+        <!-- Correo Electrónico -->
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" required>
+        
+        <br><br>
+
+        <!-- Edad -->
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" min="18" max="100">
+        
+        <br><br>
+
+        <!-- Género -->
+        <label>Género:</label>
+        <input type="radio" id="masculino" name="genero" value="masculino">
+        <label for="masculino">Masculino</label>
+
+        <input type="radio" id="femenino" name="genero" value="femenino">
+        <label for="femenino">Femenino</label>
+
+        <input type="radio" id="otro" name="genero" value="otro">
+        <label for="otro">Otro</label>
+        
+        <br><br>
+
+        <!-- Aficiones -->
+        <label>Aficiones:</label>
+        <input type="checkbox" id="aficion1" name="aficiones" value="leer">
+        <label for="aficion1">Leer</label>
+
+        <input type="checkbox" id="aficion2" name="aficiones" value="deportes">
+        <label for="aficion2">Deportes</label>
+
+        <input type="checkbox" id="aficion3" name="aficiones" value="musica">
+        <label for="aficion3">Música</label>
+        
+        <br><br>
+
+        <!-- Botón de envío -->
+        <input type="submit" value="Enviar">
+    </form>
+
+</body>
+</html>
