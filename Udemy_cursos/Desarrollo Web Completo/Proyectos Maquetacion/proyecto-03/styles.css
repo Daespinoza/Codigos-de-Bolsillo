@@ -1,0 +1,27 @@
+body{
+    background-color: pink;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+article h2{
+    color: #fff;
+    background-color: #000;
+    padding: 10px;
+}
+
+article a{
+    font-size: 18px;
+    color: red;
+    text-decoration: none;
+}
+
+article a:hover{
+    text-decoration: underline;
+}
+
+article p{
+    font-size: 14px;
+    color: #000;
+    border: 1px solid grey;
+    padding: 10px;
+}
