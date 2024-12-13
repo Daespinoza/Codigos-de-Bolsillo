@@ -33,19 +33,53 @@ Given the set of algorithms that each teacher knows, you must determine the maxi
 
 ## Input
 
-The first line contains an integer N (1 <= N <= 100) indicating the number of teachers. Each of the next N lines describes a teacher with an integer A \(1 \leq A <= 10)\ representing the number of algorithms the teacher knows, followed by A different non-empty strings of at most 10 uppercase letters each, indicating the names of the algorithms that teacher knows.
+The first line contains an integer N (1 ≤ N ≤ 100) indicating the number of teachers. Each of the next N lines describes a teacher with an integer A (1 ≤ A ≤ 10) representing the number of algorithms the teacher knows, followed by A different non-empty strings of at most 10 uppercase letters each, indicating the names of the algorithms that teacher knows.
 
 ## Output
 
 Output a single line with an integer indicating the maximum number of students in a team in which every student can cooperate with each other.
 
-| **Sample Input**                                            | **Sample Output** |
-|-------------------------------------------------------------|-------------------|
-| **Sample Input 1** <br>1<br><br>3 DFS BFS DIJKSTRA           | **Sample Output 1** <br> 3                 |
-| **Sample Input 2** <br>2<br><br>4 BFS DFS LCA RMQ<br>2 PRIM KRUSKAL | **Sample Output 2** <br> 8                 |
-| **Sample Input 3** <br>4<br><br>3 BFS DFS DIJKSTRA<br>4 BFS DFS LCA RMQ<br>3 DIJKSTRA BFT DFS<br>3 FLOYD DFS BFS | **Sample Output 3** <br> 10                |
-| **Sample Input 4** <br>1<br><br>1 HAVEFUN                   | 1                 |
-| **Sample Input 5** <br>3<br><br>4 FFEK DANTZING DEMOUCRON FFT<br>4 PRIM KRUSKAL LCA FLOYD<br>4 DFS BFS DIJKSTRA RMQ | **Sample Output 4** <br> 18                |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left; vertical-align: top;">Sample Input</th>
+      <th style="text-align: left; vertical-align: top;">Sample Output</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left; vertical-align: top;">
+        **Sample Input 1**<br>1<br><br>3 DFS BFS DIJKSTRA
+      </td>
+      <td style="text-align: left; vertical-align: top;"> **Sample Output 1** <br> 3</td>
+    </tr>
+    <tr>
+      <td style="text-align: left; vertical-align: top;">
+        **Sample Input 2**<br>2<br><br>4 BFS DFS LCA RMQ<br>2 PRIM KRUSKAL
+      </td>
+      <td style="text-align: left; vertical-align: top;">**Sample Output 2** <br> 8</td>
+    </tr>
+    <tr>
+      <td style="text-align: left; vertical-align: top;">
+        **Sample Input 3** <br>4<br><br>3 BFS DFS DIJKSTRA<br>4 BFS DFS LCA RMQ<br>3 DIJKSTRA BFT DFS<br>3 FLOYD DFS BFS
+      </td>
+      <td style="text-align: left; vertical-align: top;">**Sample Output 3** <br> 10</td>
+    </tr>
+    <tr>
+      <td style="text-align: left; vertical-align: top;">
+        **Sample Input 4**<br>1<br><br>1 HAVEFUN
+      </td>
+      <td style="text-align: left; vertical-align: top;">**Sample Output 4** <br> 1</td>
+    </tr>
+    <tr>
+      <td style="text-align: left; vertical-align: top;">
+        **Sample Input 5**<br>3<br><br>4 FFEK DANTZING DEMOUCRON FFT<br>4 PRIM KRUSKAL LCA FLOYD<br>4 DFS BFS DIJKSTRA RMQ
+      </td>
+      <td style="text-align: left; vertical-align: top;">**Sample Output 4** <br> 18</td>
+    </tr>
+  </tbody>
+</table>
+
 
 
 # Problem B - Build the Perfect House
