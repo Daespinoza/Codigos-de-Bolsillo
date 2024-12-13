@@ -49,33 +49,33 @@ Output a single line with an integer indicating the maximum number of students i
   <tbody>
     <tr>
       <td style="text-align: left; vertical-align: top;">
-        **Sample Input 1**<br>1<br><br>3 DFS BFS DIJKSTRA
+        <b>Sample Input 1<\b><br>1<br>3 DFS BFS DIJKSTRA
       </td>
-      <td style="text-align: left; vertical-align: top;"> **Sample Output 1** <br> 3</td>
+      <td style="text-align: left; vertical-align: top;"> <b>Sample Output 1<\b> <br> 3</td>
     </tr>
     <tr>
       <td style="text-align: left; vertical-align: top;">
-        **Sample Input 2**<br>2<br><br>4 BFS DFS LCA RMQ<br>2 PRIM KRUSKAL
+        <b>Sample Input 2<\b> <br>2<br>4 BFS DFS LCA RMQ<br>2 PRIM KRUSKAL
       </td>
-      <td style="text-align: left; vertical-align: top;">**Sample Output 2** <br> 8</td>
+      <td style="text-align: left; vertical-align: top;"> <b>Sample Output 2<\b> <br> 8</td>
     </tr>
     <tr>
       <td style="text-align: left; vertical-align: top;">
-        **Sample Input 3** <br>4<br><br>3 BFS DFS DIJKSTRA<br>4 BFS DFS LCA RMQ<br>3 DIJKSTRA BFT DFS<br>3 FLOYD DFS BFS
+        <b>Sample Input 3<\b> <br>4<br>3 BFS DFS DIJKSTRA<br>4 BFS DFS LCA RMQ<br>3 DIJKSTRA BFT DFS<br>3 FLOYD DFS BFS
       </td>
-      <td style="text-align: left; vertical-align: top;">**Sample Output 3** <br> 10</td>
+      <td style="text-align: left; vertical-align: top;"><b>Sample Output 3<\b> <br> 10</td>
     </tr>
     <tr>
       <td style="text-align: left; vertical-align: top;">
-        **Sample Input 4**<br>1<br><br>1 HAVEFUN
+        <b>Sample Input 4<\b> <br>1<br>1 HAVEFUN
       </td>
-      <td style="text-align: left; vertical-align: top;">**Sample Output 4** <br> 1</td>
+      <td style="text-align: left; vertical-align: top;"><b>Sample Output 4<\b> <br> 1</td>
     </tr>
     <tr>
       <td style="text-align: left; vertical-align: top;">
-        **Sample Input 5**<br>3<br><br>4 FFEK DANTZING DEMOUCRON FFT<br>4 PRIM KRUSKAL LCA FLOYD<br>4 DFS BFS DIJKSTRA RMQ
+        <b>Sample Input 5<\b><br>3<br>4 FFEK DANTZING DEMOUCRON FFT<br>4 PRIM KRUSKAL LCA FLOYD<br>4 DFS BFS DIJKSTRA RMQ
       </td>
-      <td style="text-align: left; vertical-align: top;">**Sample Output 4** <br> 18</td>
+      <td style="text-align: left; vertical-align: top;"><b>Sample Output 4<\b> <br> 18</td>
     </tr>
   </tbody>
 </table>
