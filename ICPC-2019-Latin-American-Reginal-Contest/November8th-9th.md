@@ -80,7 +80,17 @@ Output a single line with an integer indicating the maximum number of students i
   </tbody>
 </table>
 
+>[!NOTE]
+>
+>This is a standard NOTE block.
 
+>>[!TIP]
+>
+>This is a standard TIP.
+
+>>[!IMPORTANT]
+>
+>This is an IMPORTANT note.
 
 # Problem B - Build the Perfect House
  
