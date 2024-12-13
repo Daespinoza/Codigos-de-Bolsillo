@@ -49,33 +49,33 @@ Output a single line with an integer indicating the maximum number of students i
   <tbody>
     <tr>
       <td style="text-align: left; vertical-align: top;">
-        <b>Sample Input 1<\b><br>1<br>3 DFS BFS DIJKSTRA
+        1<br>3 DFS BFS DIJKSTRA
       </td>
-      <td style="text-align: left; vertical-align: top;"> <b>Sample Output 1<\b> <br> 3</td>
+      <td style="text-align: left; vertical-align: top;"> <br> 3</td>
     </tr>
     <tr>
       <td style="text-align: left; vertical-align: top;">
-        <b>Sample Input 2<\b> <br>2<br>4 BFS DFS LCA RMQ<br>2 PRIM KRUSKAL
+         2<br>4 BFS DFS LCA RMQ<br>2 PRIM KRUSKAL
       </td>
-      <td style="text-align: left; vertical-align: top;"> <b>Sample Output 2<\b> <br> 8</td>
+      <td style="text-align: left; vertical-align: top;"> 8</td>
     </tr>
     <tr>
       <td style="text-align: left; vertical-align: top;">
-        <b>Sample Input 3<\b> <br>4<br>3 BFS DFS DIJKSTRA<br>4 BFS DFS LCA RMQ<br>3 DIJKSTRA BFT DFS<br>3 FLOYD DFS BFS
+        4<br>3 BFS DFS DIJKSTRA<br>4 BFS DFS LCA RMQ<br>3 DIJKSTRA BFT DFS<br>3 FLOYD DFS BFS
       </td>
-      <td style="text-align: left; vertical-align: top;"><b>Sample Output 3<\b> <br> 10</td>
+      <td style="text-align: left; vertical-align: top;">10</td>
     </tr>
     <tr>
       <td style="text-align: left; vertical-align: top;">
-        <b>Sample Input 4<\b> <br>1<br>1 HAVEFUN
+       1<br>1 HAVEFUN
       </td>
-      <td style="text-align: left; vertical-align: top;"><b>Sample Output 4<\b> <br> 1</td>
+      <td style="text-align: left; vertical-align: top;">1</td>
     </tr>
     <tr>
       <td style="text-align: left; vertical-align: top;">
-        <b>Sample Input 5<\b><br>3<br>4 FFEK DANTZING DEMOUCRON FFT<br>4 PRIM KRUSKAL LCA FLOYD<br>4 DFS BFS DIJKSTRA RMQ
+        3<br>4 FFEK DANTZING DEMOUCRON FFT<br>4 PRIM KRUSKAL LCA FLOYD<br>4 DFS BFS DIJKSTRA RMQ
       </td>
-      <td style="text-align: left; vertical-align: top;"><b>Sample Output 4<\b> <br> 18</td>
+      <td style="text-align: left; vertical-align: top;">18</td>
     </tr>
   </tbody>
 </table>
@@ -89,28 +89,36 @@ Output a single line with an integer indicating the maximum number of students i
  Since Alice and love spacious rooms, your task is to the maximum perimeter a perfect house can have.
  
  ## Input
- The first line contains an integer N ( 1 <= N <= 10 ** 4) indicating the number of vegetable plants in Alice and Bob`s field. Vegetable plants are represented as points in the two dimensional plane, being (0,0) the point of the field that has most beautiful view. Each of the next N lines describes a vegetable plant with two integer X and Y (-10 ** 9 <= X, Y <= 10 ** 9) indicating the coordinates of the plant. No two vegetable plants have the same location and none of them is at point (0,0).
+ The first line contains an integer N (1 ≤ N ≤ $$10^4$$) indicating the number of vegetable plants in Alice and Bob`s field. Vegetable plants are represented as points in the two dimensional plane, being (0,0) the point of the field that has most beautiful view. Each of the next N lines describes a vegetable plant with two integer X and Y ($$-10^9$$ ≤ X, Y ≤ $$10^9$$) indicating the coordinates of the plant. No two vegetable plants have the same location and none of them is at point (0,0).
  
 ## Output
  Output a single line with a number indicating the maximum perimeter a perfect house can have. The result must be output as a rational number with exactly four digits after the decimal point, rounded if necessary. Notice that the sides of the house don`t need to be aligned with the coordinate axes.
  
- ### Sample input 1
- 1
- 
- 0 1
- 
- ### Sample output 1
- 8.0000
- 
- ### Sample input 2
- 2
- 
- 10 4
- 
- -5 -8
- 
- ### Sample output 2
- 74.9634
+ <table>
+  <thead>
+    <tr>
+      <th style="text-align: left; vertical-align: top;">Sample Input</th>
+      <th style="text-align: left; vertical-align: top;">Sample Output</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left; vertical-align: top;">
+        1<br>
+        0 1
+      </td>
+      <td style="text-align: left; vertical-align: top;">8.0000</td>
+    </tr>
+    <tr>
+      <td style="text-align: left; vertical-align: top;">
+        2<br>
+        10 4<br>
+        -5 -8
+      </td>
+      <td style="text-align: left; vertical-align: top;">74.9634</td>
+    </tr>
+  </tbody>
+</table>
  
 # Ploblem C - Cut Inequality Down
  
