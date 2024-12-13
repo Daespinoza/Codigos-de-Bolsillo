@@ -25,11 +25,11 @@ Unless otherwise stated, the following conditions hold for all problems.
 
 # Problem A - Algorithm Teaching
 
-The Latin American Beginners Regional Contest is coming, and the University of Byteland wants to prepare a team of newly-admitted students to compete. The university has N teachers that can instruct students in the topic of algorithms. Each candidate student must be trained by a single teacher, in a non-empty subset of algorithms that the teacher knows. For example, if a given teacher knows the two algorithms PRIM and KRUSKAL, then the teacher can train a student just on PRIM, just on KRUSKAL, or on both PRIM and KRUSKAL. As you can see, in this case there are three different options for this particular teacher to train a student. In general, a given teacher that knows A different algorithms can train a student in 2**A - 1 different ways. All these 2 ** A - 1 options can be carried out, because the university has a lot of new students, and there is no limit on the number of students a teacher can train.
+The Latin American Beginners Regional Contest is coming, and the University of Byteland wants to prepare a team of newly-admitted students to compete. The university has N teachers that can instruct students in the topic of algorithms. Each candidate student must be trained by a single teacher, in a non-empty subset of algorithms that the teacher knows. For example, if a given teacher knows the two algorithms **PRIM** and **KRUSKAL**, then the teacher can train a student just on **PRIM**, just on **KRUSKAL**, or on both **PRIM** and **KRUSKAL**. As you can see, in this case there are three different options for this particular teacher to train a student. In general, a given teacher that knows A different algorithms can train a student in 2^A - 1 different ways. All these 2^A - 1 options can be carried out, because the university has a lot of new students, and there is no limit on the number of students a teacher can train.
 
-The university would like to form a team having as many students as possible. However, each pair of students in the final team must be able to cooperate, which means that each one of them must have been trained on an algorithm that the other hasn't. For example, a student trained on BFS and DFS can cooperate with another student trained on DFS and DIJKSTRA, because the first student is trained on BFS while the second isn't, and the second student is trained on DIJKSTRA while the first student isn't. On the other hand, a student trained on BFS and DFS cannot cooperate with another student trained just on BFS, or just on DFS, or on both BFS and DFS, among others.
+The university would like to form a team having as many students as possible. However, each pair of students in the final team must be able to cooperate, which means that each one of them must have been trained on an algorithm that the other hasn't. For example, a student trained on **BFS** and **DFS** can cooperate with another student trained on **DFS** and **DIJKSTRA**, because the first student is trained on **BFS** while the second isn't, and the second student is trained on **DIJKSTRA** while the first student isn't. On the other hand, a student trained on **BFS** and **DFS** cannot cooperate with another student trained just on **BFS**, or just on **DFS**, or on both **BFS** and **DFS**, among others.
 
-Given the set of algorithms that each teacher knows, you must determine the maximum number of students in a team in which every student can cooperate with each other. Recall that each student must be trained by a single teacher, while each teacher can train as many students as needed. For example, if there is just one teacher who knows the algorithms DFS, BFS and DIJKSTRA, it is possible to prepare a team with up to three students: a first student trained on DFS and BFS, a second student trained on DFS and DIJKSTRA, and a third student trained on BFS and DIJKSTRA.
+Given the set of algorithms that each teacher knows, you must determine the maximum number of students in a team in which every student can cooperate with each other. Recall that each student must be trained by a single teacher, while each teacher can train as many students as needed. For example, if there is just one teacher who knows the algorithms **DFS**, **BFS** and **DIJKSTRA**, it is possible to prepare a team with up to three students: a first student trained on **DFS** and **BFS**, a second student trained on **DFS** and **DIJKSTRA**, and a third student trained on **BFS** and **DIJKSTRA**.
 
 ## Input
 
@@ -39,57 +39,14 @@ The first line contains an integer N (1 <= N <= 100) indicating the number of te
 
 Output a single line with an integer indicating the maximum number of students in a team in which every student can cooperate with each other.
 
-### Sample Input 1
-1
+| **Sample Input**                                            | **Sample Output** |
+|-------------------------------------------------------------|-------------------|
+| **Sample Input 1** <br>1<br><br>3 DFS BFS DIJKSTRA           | **Sample Output 1** <br> 3                 |
+| **Sample Input 2** <br>2<br><br>4 BFS DFS LCA RMQ<br>2 PRIM KRUSKAL | **Sample Output 2** <br> 8                 |
+| **Sample Input 3** <br>4<br><br>3 BFS DFS DIJKSTRA<br>4 BFS DFS LCA RMQ<br>3 DIJKSTRA BFT DFS<br>3 FLOYD DFS BFS | **Sample Output 3** <br> 10                |
+| **Sample Input 4** <br>1<br><br>1 HAVEFUN                   | 1                 |
+| **Sample Input 5** <br>3<br><br>4 FFEK DANTZING DEMOUCRON FFT<br>4 PRIM KRUSKAL LCA FLOYD<br>4 DFS BFS DIJKSTRA RMQ | **Sample Output 4** <br> 18                |
 
-3 DFS BFS DIJKSTRA
-
-### Sample Output 1
-3
-
-### Sample Input 2
-2
-
-4 BFS DFS LCA RMQ
-
-2 PRIM KRUSKAL
-
-### Sample Output 2
-8
-
-### Sample Input 3
-4
-
-3 BFS DFS DIJKSTRA
-
-4 BFS DFS LCA RMQ
-
-3 DIJKSTRA BFT DFS
-
-3 FLOYD DFS BFS
-
-### Sample Output 3
-10
-
-### Sample Input 4
-1
-
-1 HAVEFUN
-
-### Sample Output 4
-1
-
-### Sample Input 5
-3
-
-4 FFEK DANTZING DEMOUCRON FFT
-
-4 PRIM KRUSKAL LCA FLOYD
-
-4 DFS BFS DIJKSTRA RMQ
-
-### Sample Output 5
-18
 
 # Problem B - Build the Perfect House
  
