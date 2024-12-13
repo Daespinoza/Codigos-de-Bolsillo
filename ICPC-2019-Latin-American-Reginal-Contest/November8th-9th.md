@@ -104,7 +104,7 @@ Output a single line with an integer indicating the maximum number of students i
 ## Output
  Output a single line with a number indicating the maximum perimeter a perfect house can have. The result must be output as a rational number with exactly four digits after the decimal point, rounded if necessary. Notice that the sides of the house don`t need to be aligned with the coordinate axes.
  
- <table style="font-family:Courier New, Courier, monospace;">
+ <table>
   <thead>
     <tr>
       <th style="text-align: left; vertical-align: top;">Sample Input</th>
@@ -117,7 +117,7 @@ Output a single line with an integer indicating the maximum number of students i
         1<br>
         0 1
       </td>
-      <td style="text-align: left; vertical-align: top; background-color: gray;">8.0000</td>
+      <td style="text-align: left; vertical-align: top;">8.0000</td>
     </tr>
     <tr>
       <td style="text-align: left; vertical-align: top;">
@@ -125,7 +125,7 @@ Output a single line with an integer indicating the maximum number of students i
         10 4<br>
         -5 -8
       </td>
-      <td style="text-align: left; vertical-align: top; background-color: gray;">74.9634</td>
+      <td style="text-align: left; vertical-align: top;">74.9634</td>
     </tr>
   </tbody>
 </table>
@@ -137,7 +137,7 @@ Output a single line with an integer indicating the maximum number of students i
  Everything changed after the International Collectivist and Popular Congress (ICPC) managed to overthrown the Constantones and put a new economic system in place, a system which strives for fairness and takes into account that each inhabitant might go through good and bad economic periods in life.
  In the new system an upper limit U on how much wealth an individual can accumulate and a lower bound L representing the minimum wealth required in order for an individual to keep a decent lifestyle were established. At the end of each month every inhabitant will evaluate their wealth. Those with more that U will donate what they own above the upper limit to the ICPC while the one who sadly have less than L will receive enough from ICPC to reach the established lower bound.
  The Cuadradones, which are very good farmers, need your help managing their finance. The long era of Nlogonialism has seriously harmed the environment and now the weather in Complejidonia is very volatile. This has a big impact on its agriculture that fluctuantes between good and bad periods.
- A farmer keeps a long record A1, A2, ..., An of their net income (income minus expenses) on a sequence of N months. Based on this data the farmer wants to plan how to invest their wealth in order to avoid being a burden to the ICPC in the future. The farmer wants to be able to know, given an initial wealth X at the beginning of a month B, how much they would own at the end of a month E (considering that at the end of each month they might either donate or receive a donation to ensure their wealth is between L and U, inclusive)
+ A farmer keeps a long record A~1, A2, ..., An of their net income (income minus expenses) on a sequence of N months. Based on this data the farmer wants to plan how to invest their wealth in order to avoid being a burden to the ICPC in the future. The farmer wants to be able to know, given an initial wealth X at the beginning of a month B, how much they would own at the end of a month E (considering that at the end of each month they might either donate or receive a donation to ensure their wealth is between L and U, inclusive)
  
 ## Input
  The first line contains three integers N (1 <= N <= 10 ** 5), L and U (1 <= L <= U <= 2 * 10 ** 6), indicating respectively the number of months for which the farmer has net income records, the wealth lower bound and the wealth upper bound. The second line contains N integers A1, A2, ..., An ( -10 ** 6 for i = 1,2,...,N), where Ai is the net income on the i-th month. The third line contains an integer Q (1 <= Q <= 10 ** 5) representing the number of scenarios the farmer is interested in. Each of the next Q lines describes a scenario with three integers B, E (1 <= B <= E <= N) and X (L <= X <= U), indicating that the farmer would like to know how much they would own at the end of month E if they start owning X at the beginning of month B, and each month j = B, B + 1, ..., E their net income Aj.
