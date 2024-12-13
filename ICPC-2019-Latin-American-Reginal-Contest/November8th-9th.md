@@ -84,11 +84,11 @@ Output a single line with an integer indicating the maximum number of students i
 >
 >This is a standard NOTE block.
 
->>[!TIP]
+>[!TIP]
 >
 >This is a standard TIP.
 
->>[!IMPORTANT]
+>[!IMPORTANT]
 >
 >This is an IMPORTANT note.
 
@@ -104,11 +104,11 @@ Output a single line with an integer indicating the maximum number of students i
 ## Output
  Output a single line with a number indicating the maximum perimeter a perfect house can have. The result must be output as a rational number with exactly four digits after the decimal point, rounded if necessary. Notice that the sides of the house don`t need to be aligned with the coordinate axes.
  
- <table>
+ <table style="font-family:Courier New, Courier, monospace;">
   <thead>
     <tr>
       <th style="text-align: left; vertical-align: top;">Sample Input</th>
-      <th style="text-align: left; vertical-align: top;">Sample Output</th>
+      <th style="text-align: left; vertical-align: top; background-color: gray;">Sample Output</th>
     </tr>
   </thead>
   <tbody>
@@ -117,7 +117,7 @@ Output a single line with an integer indicating the maximum number of students i
         1<br>
         0 1
       </td>
-      <td style="text-align: left; vertical-align: top;">8.0000</td>
+      <td style="text-align: left; vertical-align: top; background-color: gray;">8.0000</td>
     </tr>
     <tr>
       <td style="text-align: left; vertical-align: top;">
@@ -125,7 +125,7 @@ Output a single line with an integer indicating the maximum number of students i
         10 4<br>
         -5 -8
       </td>
-      <td style="text-align: left; vertical-align: top;">74.9634</td>
+      <td style="text-align: left; vertical-align: top; background-color: gray;">74.9634</td>
     </tr>
   </tbody>
 </table>
