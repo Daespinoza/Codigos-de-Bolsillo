@@ -80,18 +80,6 @@ Output a single line with an integer indicating the maximum number of students i
   </tbody>
 </table>
 
->[!NOTE]
->
->This is a standard NOTE block.
-
->[!TIP]
->
->This is a standard TIP.
-
->[!IMPORTANT]
->
->This is an IMPORTANT note.
-
 # Problem B - Build the Perfect House
  
  Alice and Bob are now 45 years old and have enjoyed a long five-years retirement maintaining their vegetable field. Going back and forth to the field from their house in the city has become a really exhausting task, so they decided to move to the field permanently. They currently have a perfect fence surrounding all the vegetable plants (it has minimum perimeter and area), but they will tear down the old fence and build a new perfect house to live in.
