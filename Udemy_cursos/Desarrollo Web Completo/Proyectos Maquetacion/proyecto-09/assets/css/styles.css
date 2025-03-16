@@ -1,0 +1,38 @@
+@font-face{
+    font-family: NotoSansJP-Local;
+    src: url(../fonts/NotoSansJP/NotoSansJP-VariableFont_wght.ttf)
+}
+
+body{
+    background-color: aliceblue;
+}
+
+h1, h2 {
+    font-size: 50px;
+    font-family: "NotoSansJP-Local";
+    color: #333;
+}
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: "NotoSansJP-Local";
+}
+h3 {
+    font-size: 35px;
+    font-family: 'Noto Serif JP', serif;
+    color: goldenrod;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* Propiedades para texto vertical */
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+p {
+    margin-bottom: 10px;
+    font-family: "NotoSansJP-Local";
+}

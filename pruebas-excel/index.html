@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de Excel con SheetJS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Editor de Excel</h1>
+
+    <!-- Input para cargar un archivo Excel -->
+    <input type="file" id="fileInput" accept=".xlsx, .xls, .csv">
+    <br><br>
+
+    <!-- Botones para acciones -->
+    <button id="readBtn">Leer Archivo</button>
+    <button id="modifyBtn">Modificar Datos</button>
+    <button id="exportBtn">Exportar a Excel</button>
+
+    <!-- Área para mostrar los datos -->
+    <h2>Datos del Archivo:</h2>
+    <pre id="dataOutput"></pre>
+
+    <!-- Incluir SheetJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
