@@ -1,0 +1,158 @@
+<mjml>
+  <mj-head>
+    <mj-title>Bienvenido a Nuestro Servicio</mj-title>
+    <mj-preview>¡Gracias por unirte a nosotros! Aquí está toda la información importante.</mj-preview>
+    <mj-attributes>
+      <mj-all font-family="Arial, Helvetica, sans-serif" />
+      <mj-text font-size="16px" color="#333333" line-height="1.5" />
+      <mj-section background-color="#ffffff" padding="20px 0" />
+      <mj-button background-color="#007BFF" color="#ffffff" border-radius="4px" />
+    </mj-attributes>
+    <mj-style inline="inline">
+      .link-nostyle { color: inherit; text-decoration: none }
+      .footer-link { color: #878787; text-decoration: underline }
+    </mj-style>
+    <!-- Compatibilidad con Outlook -->
+    <mj-style>
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        .outlook-background { background-color: #f0f0f0 !important; }
+        .outlook-button { background-color: #007BFF !important; color: #ffffff !important; }
+      }
+    </mj-style>
+  </mj-head>
+  
+  <mj-body background-color="#f0f0f0" width="600px">
+    <!-- Header con logo -->
+    <mj-section padding-top="20px" padding-bottom="0">
+      <mj-column>
+        <mj-image width="150px" src="https://www.creativefabrica.com/wp-content/uploads/2018/11/Company-business-generic-logo-by-DEEMKA-STUDIO-1.jpg" alt="Logo de la empresa" align="center" padding="10px" />
+      </mj-column>
+    </mj-section>
+    
+    <!-- Banner principal -->
+    <mj-section padding-top="0">
+      <mj-column>
+        <mj-image width="600px" src="https://img.freepik.com/vector-premium/banner-bienvenida-vectorial_687646-1335.jpg?w=2000" alt="Banner de bienvenida" padding="0" />
+      </mj-column>
+    </mj-section>
+    
+    <!-- Sección de bienvenida -->
+    <mj-section padding-top="20px" padding-bottom="0px">
+      <mj-column>
+        <mj-text font-size="24px" font-weight="bold" align="center" color="#333333">
+          ¡Hola, bienvenido a nuestro servicio!
+        </mj-text>
+        <mj-text align="center" padding-bottom="20px">
+          Estamos muy emocionados de tenerte con nosotros. A continuación encontrarás información importante para comenzar.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    
+    <!-- Sección de características (con columnas) -->
+    <mj-section background-color="#f8f9fa" border-radius="8px" padding="20px">
+      <mj-column width="33%">
+        <mj-image width="70px" src="https://th.bing.com/th/id/OIP.-6nxESRTmt-hpsQWks2dnwHaHa?rs=1&pid=ImgDetMain" alt="Icono de características" padding-bottom="10px" />
+        <mj-text font-size="18px" font-weight="bold" align="center">Fácil de usar</mj-text>
+        <mj-text align="center" font-size="14px">
+          Nuestra plataforma es intuitiva y amigable para usuarios de todos los niveles.
+        </mj-text>
+      </mj-column>
+      <mj-column width="33%">
+        <mj-image width="70px" src="https://th.bing.com/th/id/OIP.slQkyaQcfisUXSpIHXXKlwHaHa?rs=1&pid=ImgDetMain" alt="Icono de soporte" padding-bottom="10px" />
+        <mj-text font-size="18px" font-weight="bold" align="center">Soporte 24/7</mj-text>
+        <mj-text align="center" font-size="14px">
+          Estamos aquí para ayudarte cuando lo necesites, todos los días.
+        </mj-text>
+      </mj-column>
+      <mj-column width="33%">
+        <mj-image width="70px" src="https://th.bing.com/th/id/OIP.OqOp747iQxSyjNzhspVn5gHaHa?rs=1&pid=ImgDetMain" alt="Icono de seguridad" padding-bottom="10px" />
+        <mj-text font-size="18px" font-weight="bold" align="center">Seguridad</mj-text>
+        <mj-text align="center" font-size="14px">
+          Tu información siempre estará protegida con los más altos estándares.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    
+    <!-- Sección de pasos siguientes -->
+    <mj-section>
+      <mj-column>
+        <mj-text font-size="20px" font-weight="bold" padding-bottom="10px">
+          Próximos pasos:
+        </mj-text>
+        <mj-text>
+          <ol>
+            <li>Completa tu perfil con toda tu información</li>
+            <li>Explora nuestras diferentes características</li>
+            <li>Configura tus preferencias personales</li>
+          </ol>
+        </mj-text>
+        <mj-button href="https://www.tusitio.com/comenzar" background-color="#007BFF" width="250px" height="50px" font-size="16px" font-weight="bold" css-class="outlook-button">
+          COMENZAR AHORA
+        </mj-button>
+      </mj-column>
+    </mj-section>
+    
+    <!-- Testimonial -->
+    <mj-section background-url="https://via.placeholder.com/600x200/e8f4fc/e8f4fc" background-color="#e8f4fc" border-radius="8px">
+      <mj-column width="30%">
+        <mj-image width="100px" src="https://th.bing.com/th/id/OIP.-r7gVIgoByhJV_Q7Kb-RtgAAAA?w=400&h=400&rs=1&pid=ImgDetMain" alt="Foto de cliente" border-radius="50%" />
+      </mj-column>
+      <mj-column width="70%">
+        <mj-text font-style="italic" font-size="16px">
+          "Este servicio ha transformado completamente la manera en que trabajo. No puedo imaginar mi día a día sin él."
+        </mj-text>
+        <mj-text font-weight="bold">
+          María González, Cliente destacada
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    
+    <!-- Sección de redes sociales -->
+    <mj-section>
+      <mj-column>
+        <mj-text align="center" font-size="18px" font-weight="bold" padding-bottom="10px">
+          ¡Síguenos en redes sociales!
+        </mj-text>
+        <mj-social font-size="15px" icon-size="30px" mode="horizontal" align="center">
+          <mj-social-element name="facebook" href="https://www.facebook.com/" background-color="#3b5998">
+            Facebook
+          </mj-social-element>
+          <mj-social-element name="twitter" href="https://twitter.com/" background-color="#1da1f2">
+            Twitter
+          </mj-social-element>
+          <mj-social-element name="instagram" href="https://www.instagram.com/" background-color="#e1306c">
+            Instagram
+          </mj-social-element>
+        </mj-social>
+      </mj-column>
+    </mj-section>
+    
+    <!-- Descargo de responsabilidad -->
+    <mj-section>
+      <mj-column>
+        <mj-divider border-color="#dddddd" border-width="1px" padding="20px 0" />
+        <mj-text font-size="12px" color="#888888" align="center">
+          Si no reconoces esta acción o no te registraste en nuestro servicio, por favor ignora este correo o contáctanos en <a href="mailto:soporte@tuempresa.com" class="footer-link">soporte@tuempresa.com</a>.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    
+    <!-- Footer -->
+    <mj-section background-color="#333333">
+      <mj-column>
+        <mj-text color="#ffffff" font-size="14px" align="center">
+          © 2025 Tu Empresa. Todos los derechos reservados.
+        </mj-text>
+        <mj-text color="#ffffff" font-size="12px" align="center">
+          <a href="https://www.tusitio.com/terminos" class="link-nostyle" style="color: #ffffff; text-decoration: underline;">Términos y Condiciones</a> | 
+          <a href="https://www.tusitio.com/privacidad" class="link-nostyle" style="color: #ffffff; text-decoration: underline;">Política de Privacidad</a> | 
+          <a href="https://www.tusitio.com/cancelar" class="link-nostyle" style="color: #ffffff; text-decoration: underline;">Cancelar suscripción</a>
+        </mj-text>
+        <mj-text color="#aaaaaa" font-size="12px" align="center" padding-top="10px">
+          Dirección: Calle Ejemplo 123, Ciudad, País
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    
+  </mj-body>
+</mjml>
