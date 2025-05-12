@@ -1,0 +1,110 @@
+<mjml>
+  <mj-head>
+    <mj-title>Presentación Profesional - David Espinoza</mj-title>
+    <mj-font name="Roboto" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
+    <mj-attributes>
+      <mj-all font-family="Roboto, Helvetica, Arial, sans-serif" />
+      <mj-text font-weight="400" font-size="16px" color="#000000" line-height="24px" />
+    </mj-attributes>
+    <mj-style>
+      .header-image { border-radius: 8px 8px 0 0; }
+      .gray-section { background-color: #f5f5f5; }
+      .highlight { color: #005A9C; }
+      .separator { background-color: #eaf4ff; border-radius: 8px; }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#ffffff">
+
+    <!-- Imagen de cabecera -->
+    <mj-section css-class="header-image" padding="0px">
+      <mj-column>
+        <mj-image src="https://raw.githubusercontent.com/Daespinoza/Codigos-de-Bolsillo/main/2091417.jpg" alt="Banner profesional" padding="0px" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Introducción -->
+    <mj-section padding-top="20px">
+      <mj-column>
+        <mj-text>
+          <p>Estimado equipo de <strong>Topex Labs</strong>,</p>
+          <p>Mi nombre es <strong>David Espinoza</strong>, soy <span class="highlight">Ingeniero en Computación</span> graduado del Tecnológico de Costa Rica. Recientemente vi que estuvieron contratando digitadores, y aunque llegué tarde al anuncio, me gustaría presentarme para futuras oportunidades en áreas similares o afines.</p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Presentación personal -->
+    <mj-section>
+      <mj-column>
+        <mj-text>
+          <p>Tengo experiencia trabajando con herramientas digitales, manejo fluido de datos, y habilidades para tareas que requieren precisión, velocidad y organización. Estoy muy motivado por formar parte de un equipo donde pueda crecer profesionalmente, aportar mis capacidades técnicas y colaborar con procesos productivos y tecnológicos.</p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Separador con foto -->
+    <mj-section css-class="separator" padding="20px">
+      <mj-column width="25%">
+        <mj-image src="https://raw.githubusercontent.com/Daespinoza/Daespinoza/main/RetratoGhibli.jpeg" alt="Foto de David" width="120px" border-radius="8px" />
+      </mj-column>
+      <mj-column width="75%">
+        <mj-text>
+          <p><strong>Sobre mí:</strong></p>
+          <p>Recién egresado del TEC, con conocimientos en programación (.NET, HTML, CSS), documentación técnica y herramientas ofimáticas. También me he enfocado en el desarrollo de correos HTML para marketing, y puedo colaborar en tareas digitales o de soporte general.</p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Habilidades destacadas -->
+    <mj-section css-class="gray-section" padding="20px">
+      <mj-column>
+        <mj-text>
+          <p><strong>¿Qué puedo aportar a Topex Labs?</strong></p>
+          <ul>
+            <li>Digitación precisa y responsable</li>
+            <li>Soporte básico técnico o administrativo</li>
+            <li>Maquetación HTML / Documentación / Data entry</li>
+            <li>Actitud positiva, aprendizaje continuo y responsabilidad</li>
+          </ul>
+          <p>Estoy abierto a colaborar en cualquier área en la que pueda ser útil, siempre con profesionalismo y disposición de aprender.</p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Portafolio -->
+    <mj-section>
+      <mj-column>
+        <mj-text>
+          <p>Puede revisar algunos de mis proyectos en el siguiente enlace:</p>
+        </mj-text>
+        <mj-button background-color="#005A9C" color="white" href="https://github.com/Daespinoza" border-radius="4px">
+          Ver mi GitHub
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Despedida -->
+    <mj-section padding-bottom="20px">
+      <mj-column>
+        <mj-text>
+          <p>Adjunto mi currículum para que lo tengan en cuenta en futuras vacantes. Gracias por su tiempo y espero podamos coincidir profesionalmente en algún momento.</p>
+          <p>Atentamente,</p>
+          <p><strong>David Jose Espinoza Soto</strong><br/>
+          Teléfono: 8662 2013<br/>
+          Email: dev.daespinoza@proton.me<br/>
+          LinkedIn: www.linkedin.com/in/david-jose-espinoza-soto-8a29a5330<br/>
+          GitHub: github.com/Daespinoza</p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Pie -->
+    <mj-section background-color="#f5f5f5">
+      <mj-column>
+        <mj-text font-size="12px" align="center" color="#999999">
+          Este mensaje fue enviado con fines profesionales para futuras oportunidades en Topex Labs.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>

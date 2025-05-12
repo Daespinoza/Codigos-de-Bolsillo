@@ -1,0 +1,106 @@
+<mjml>
+  <mj-head>
+    <mj-title>Solicitud de Empleo - Documentador Técnico</mj-title>
+    <mj-font name="Roboto" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
+    <mj-attributes>
+      <mj-all font-family="Roboto, Helvetica, Arial, sans-serif" />
+      <mj-text font-weight="400" font-size="16px" color="#000000" line-height="24px" />
+      <mj-section padding="0px" />
+    </mj-attributes>
+    <mj-style>
+      .header-image { border-radius: 8px 8px 0 0; }
+      .profile-image { border-radius: 8px; }
+      .blue-text { color: #0066cc; }
+      .gray-section { background-color: #f5f5f5; }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#ffffff">
+    <!-- Encabezado con imagen estática -->
+    <mj-section css-class="header-image" padding="0px">
+        <mj-column>
+            <mj-image src="https://raw.githubusercontent.com/Daespinoza/Codigos-de-Bolsillo/main/2091417.jpg" alt="Banner de programación" padding="0px" css-class="header-image" />
+        </mj-column>
+    </mj-section>
+
+    <mj-section padding-top="20px" padding-bottom="0px">
+      <mj-column>
+        <mj-text>
+          <p>Buenos días,</p>
+          <p>Espero que este mensaje le encuentre bien. Mi nombre es David José Espinoza Soto y me dirijo a usted con interés en la posición de <strong>Documentador Técnico</strong> anunciada en el grupo de LinkedIn <em>“Buscando Brete Costa Rica”</em>.</p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding-top="20px">
+      <mj-column width="70%">
+        <mj-text>
+          <p>Soy <span class="blue-text">Bachiller en Ingeniería en Computación</span> por el Instituto Tecnológico de Costa Rica. Aunque recientemente me gradué, cuento con más de 8 años de experiencia académica desarrollando y documentando proyectos académicos de software, lo cual me ha permitido adquirir una sólida capacidad analítica y atención al detalle.</p>
+          <p>He trabajado con tecnologías como <strong>.NET, HTML y CSS</strong>, y tengo experiencia documentando procesos en herramientas como Google Docs y Markdown. Me entusiasma la oportunidad de iniciar mi carrera profesional como documentador, aprovechando mi formación técnica y mi disposición para aprender.</p>
+        </mj-text>
+      </mj-column>
+      <mj-column width="30%">
+        <mj-image src="https://raw.githubusercontent.com/Daespinoza/Daespinoza/main/RetratoGhibli.jpeg" alt="Foto de perfil" width="150px" css-class="profile-image" />
+      </mj-column>
+    </mj-section>
+
+    <mj-section css-class="gray-section" padding="20px" border-radius="8px">
+      <mj-column>
+        <mj-text font-weight="bold" font-size="18px" color="#0066cc">
+          Habilidades relevantes:
+        </mj-text>
+        <mj-text>
+          <ul>
+            <li>Lectura y análisis de código en .NET</li>
+            <li>Documentación técnica en Markdown, Google Docs y HTML</li>
+            <li>Conocimientos básicos de Excel y CSS</li>
+            <li>Capacidad analítica desarrollada en competencias de programación</li>
+            <li>Actitud proactiva y ganas de aprender</li>
+          </ul>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Imagen lateral (perfil) reemplazando GIF) -->
+    <mj-section padding-top="20px">
+        <mj-column width="100%">
+            <!-- Tu texto aquí -->
+        </mj-column>
+        <mj-column width="100%">
+            <mj-image src="https://raw.githubusercontent.com/Daespinoza/Codigos-de-Bolsillo/main/side-shot-code-editor-using-react-js.jpg" alt="Imagen programador lateral" width="500px" css-class="profile-image" />
+        </mj-column>
+    </mj-section>
+
+    <mj-section padding-top="20px">
+      <mj-column>
+        <mj-text>
+          <p>Adjunto encontrará mi currículum actualizado con detalles sobre mi formación académica, experiencia universitaria y proyectos destacados.</p>
+        </mj-text>
+        <mj-button background-color="#0066cc" color="white" border-radius="4px" href="https://github.com/Daespinoza">
+          Visita mi GitHub
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding-top="20px" padding-bottom="20px">
+      <mj-column>
+        <mj-text>
+          <p>Estoy completamente disponible para entrevistas o pruebas técnicas, y quedo a su disposición para ampliar cualquier información que considere necesaria.</p>
+          <p>Gracias por su tiempo y consideración.</p>
+          <p><strong>David Jose Espinoza Soto</strong><br/>
+          Teléfono: 8662 2013<br/>
+          Email: dev.daespinoza@proton.me<br/>
+          LinkedIn: <a href="https://www.linkedin.com/in/david-jose-espinoza-soto-8a29a5330">Mi perfil</a><br/>
+          GitHub: <a href="https://github.com/Daespinoza">Daespinoza</a></p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#f5f5f5" padding="10px">
+      <mj-column>
+        <mj-text font-size="12px" color="#666666" align="center">
+          Este correo electrónico es confidencial y dirigido exclusivamente a su destinatario.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

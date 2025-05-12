@@ -1,0 +1,173 @@
+<mjml>
+  <mj-head>
+    <mj-title>Desarrollador Creativo - Portfolio</mj-title>
+    <mj-font name="Poppins" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700" />
+    <mj-attributes>
+      <mj-all font-family="Poppins, Helvetica, Arial, sans-serif" />
+      <mj-text font-weight="400" font-size="16px" color="#333333" line-height="24px" />
+      <mj-section padding="0px" />
+    </mj-attributes>
+    <mj-style>
+      .gradient-bg { 
+        background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+        border-radius: 8px 8px 0 0;
+      }
+      .skill-badge {
+        display: inline-block;
+        background-color: #EEF2FF;
+        color: #4F46E5;
+        padding: 5px 10px;
+        margin: 3px;
+        border-radius: 15px;
+        font-size: 12px;
+      }
+      .project-card {
+        border-left: 4px solid #6366F1;
+        padding-left: 15px;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#F9FAFB">
+    <!-- Cabecera con gradiente -->
+    <mj-section css-class="gradient-bg" padding="40px 0">
+      <mj-column>
+        <mj-text font-size="32px" font-weight="700" color="#ffffff" align="center">
+          Diseño + Código
+        </mj-text>
+        <mj-text font-size="18px" color="#ffffff" align="center" font-weight="300">
+          Portfolio de [TU NOMBRE] • Desarrollador Creativo
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Introducción con foto -->
+    <mj-section background-color="#ffffff" padding="20px">
+      <mj-column width="35%">
+        <mj-image src="https://raw.githubusercontent.com/Daespinoza/Daespinoza/main/RetratoGhibli.jpeg" alt="Tu foto" width="300px" border-radius="8px" />
+      </mj-column>
+      <mj-column width="65%">
+        <mj-text font-size="24px" font-weight="600" color="#111827">
+          ¡Hola, [NOMBRE DEL DESTINATARIO]!
+        </mj-text>
+        <mj-text>
+          <p>Buenos días,</p>
+          <p>Soy <span style="color:#6366F1;font-weight:500;">[TU NOMBRE]</span>, un desarrollador que combina <span style="color:#6366F1;font-weight:500;">habilidades técnicas con creatividad</span> para crear experiencias digitales memorables.</p>
+          <p>Me entusiasma la posibilidad de formar parte del equipo de [EMPRESA] en el rol de [PUESTO], donde podría aportar mi experiencia en [PRINCIPALES HABILIDADES].</p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Animación/GIF -->
+    <mj-section background-color="#ffffff" padding="0 20px 20px">
+      <mj-column>
+        <mj-image src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHhpczN5c2Z3ZXloNHBmenVmNmZwOHRhZ21sYmZxdWRxcGlzZnd3aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT9IgzoKnwFNmISR8I/giphy.gif" alt="GIF de código animado" border-radius="8px" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Habilidades -->
+    <mj-section background-color="#ffffff" padding="0 20px 20px">
+      <mj-column>
+        <mj-text font-size="20px" font-weight="600" color="#111827">
+          Habilidades y Tecnologías
+        </mj-text>
+        <mj-text>
+          <div>
+            <span class="skill-badge">JavaScript</span>
+            <span class="skill-badge">TypeScript</span>
+            <span class="skill-badge">React</span>
+            <span class="skill-badge">Vue</span>
+            <span class="skill-badge">Angular</span>
+            <span class="skill-badge">Node.js</span>
+            <span class="skill-badge">Express</span>
+            <span class="skill-badge">MongoDB</span>
+            <span class="skill-badge">PostgreSQL</span>
+            <span class="skill-badge">AWS</span>
+            <span class="skill-badge">Docker</span>
+            <span class="skill-badge">CI/CD</span>
+            <span class="skill-badge">UI/UX</span>
+            <span class="skill-badge">Figma</span>
+            <span class="skill-badge">Adobe XD</span>
+          </div>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Proyectos destacados -->
+    <mj-section background-color="#ffffff" padding="0 20px 20px">
+      <mj-column>
+        <mj-text font-size="20px" font-weight="600" color="#111827">
+          Proyectos destacados
+        </mj-text>
+        
+        <mj-text css-class="project-card">
+          <h3 style="color:#4F46E5;margin-bottom:5px;">✨ [NOMBRE DEL PROYECTO]</h3>
+          <p style="margin-top:0;">Desarrollo de [DESCRIPCIÓN DEL PROYECTO] utilizando [TECNOLOGÍAS]. Logré mejorar [MÉTRICAS] en un [PORCENTAJE]%.</p>
+        </mj-text>
+        
+        <mj-spacer height="10px" />
+        
+        <mj-text css-class="project-card">
+          <h3 style="color:#4F46E5;margin-bottom:5px;">🚀 [NOMBRE DEL PROYECTO]</h3>
+          <p style="margin-top:0;">Creación de [DESCRIPCIÓN DEL PROYECTO] con [TECNOLOGÍAS]. El proyecto fue reconocido por [LOGRO].</p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- CV adjunto -->
+    <mj-section background-color="#EEF2FF" padding="20px" border-radius="8px">
+      <mj-column width="70%">
+        <mj-text font-size="18px" font-weight="600" color="#4F46E5">
+          Mi CV completo está adjunto
+        </mj-text>
+        <mj-text>
+          He adjuntado mi currículum detallado en PDF para que pueda revisar mi experiencia completa. Puede abrirlo directamente en Gmail.
+        </mj-text>
+      </mj-column>
+      <mj-column width="30%">
+        <mj-button background-color="#6366F1" color="white" border-radius="8px" href="#" font-weight="600">
+          Ver CV
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Llamada a la acción -->
+    <mj-section background-color="#ffffff" padding="20px">
+      <mj-column>
+        <mj-text>
+          <p>También puede visitar mi portfolio en línea donde encontrará más ejemplos de mi trabajo y proyectos recientes:</p>
+        </mj-text>
+        <mj-button background-color="#111827" color="white" border-radius="8px" href="#">
+          Ver Portfolio Completo
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Contacto y despedida -->
+    <mj-section background-color="#ffffff" padding="20px" border-radius="0 0 8px 8px">
+      <mj-column>
+        <mj-text>
+          <p>Me encantaría tener la oportunidad de hablar más sobre cómo puedo contribuir al éxito de [EMPRESA]. Estoy disponible para una entrevista en el momento que mejor le convenga.</p>
+          <p>Atentamente,</p>
+          <p><strong>[TU NOMBRE]</strong></p>
+        </mj-text>
+        <mj-social font-size="12px" icon-size="20px" mode="horizontal">
+          <mj-social-element name="github" href="https://github.com/[TU-USUARIO]" background-color="#6366F1"></mj-social-element>
+          <mj-social-element name="linkedin" href="https://linkedin.com/in/[TU-USUARIO]" background-color="#6366F1"></mj-social-element>
+          <mj-social-element name="twitter" href="https://twitter.com/[TU-USUARIO]" background-color="#6366F1"></mj-social-element>
+        </mj-social>
+        <mj-text font-size="14px" color="#6B7280" align="center">
+          📧 [TU-EMAIL] | 📱 [TU-TELÉFONO] | 🌐 [TU-SITIO-WEB]
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Pie de página -->
+    <mj-section padding="10px">
+      <mj-column>
+        <mj-text font-size="12px" color="#9CA3AF" align="center">
+          Este email es confidencial y está dirigido exclusivamente a su destinatario.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

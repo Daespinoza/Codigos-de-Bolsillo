@@ -1,0 +1,143 @@
+<mjml>
+  <mj-head>
+    <mj-title>Desarrollador Full Stack - Candidatura</mj-title>
+    <mj-font name="Montserrat" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" />
+    <mj-attributes>
+      <mj-all font-family="Montserrat, Helvetica, Arial, sans-serif" />
+      <mj-text font-weight="400" font-size="16px" color="#333333" line-height="24px" />
+      <mj-section padding="0px" />
+    </mj-attributes>
+    <mj-style>
+      .dark-bg { background-color: #2c3e50; color: white; }
+      .accent-bg { background-color: #27ae60; }
+      .profile-image { border-radius: 50%; border: 3px solid #27ae60; }
+      .tech-icon { display: inline-block; margin: 0 5px; }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#f4f4f4">
+    <!-- Encabezado con tecnologías -->
+    <mj-section css-class="dark-bg" padding="20px">
+      <mj-column width="100%">
+        <mj-text font-size="28px" font-weight="700" color="#ffffff" align="center">
+          < Desarrollador de Software />
+        </mj-text>
+        <mj-text font-size="16px" color="#27ae60" align="center">
+          JavaScript | React | Node.js | Python | SQL
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Sección de perfil con foto circular -->
+    <mj-section background-color="#ffffff" padding="20px" border-radius="8px">
+      <mj-column width="30%">
+        <mj-image src="https://raw.githubusercontent.com/Daespinoza/Daespinoza/main/RetratoGhibli.jpeg" width="150px" css-class="profile-image" padding="10px" />
+      </mj-column>
+      <mj-column width="70%">
+        <mj-text font-size="22px" font-weight="700" color="#2c3e50">
+          ¡Hola! Soy [TU NOMBRE]
+        </mj-text>
+        <mj-text>
+          <p>Buenos días,</p>
+          <p>Me dirijo a usted porque estoy interesado/a en la posición de [PUESTO] en [EMPRESA]. Con [X] años de experiencia en desarrollo de software, he trabajado en proyectos que van desde [TIPO DE PROYECTOS] hasta [OTRO TIPO].</p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Separador -->
+    <mj-section padding="10px">
+      <mj-column>
+        <mj-divider border-width="1px" border-color="#e0e0e0" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Experiencia destacada -->
+    <mj-section background-color="#ffffff" padding="20px" border-radius="8px">
+      <mj-column>
+        <mj-text font-size="20px" font-weight="700" color="#27ae60">
+          Experiencia destacada
+        </mj-text>
+        <mj-text>
+          <table style="width:100%; border-collapse: collapse;">
+            <tr>
+              <td style="width:30%; padding:10px; vertical-align:top; font-weight:bold;">2022 - Presente</td>
+              <td style="width:70%; padding:10px; vertical-align:top;">
+                <strong style="color:#2c3e50;">Desarrollador Senior en [EMPRESA]</strong>
+                <p>Desarrollo de aplicaciones web utilizando React en el frontend y Node.js en el backend. Implementación de CI/CD y mejoras de rendimiento.</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width:30%; padding:10px; vertical-align:top; font-weight:bold;">2020 - 2022</td>
+              <td style="width:70%; padding:10px; vertical-align:top;">
+                <strong style="color:#2c3e50;">Desarrollador Full Stack en [EMPRESA]</strong>
+                <p>Desarrollo de APIs RESTful, implementación de microservicios y optimización de bases de datos.</p>
+              </td>
+            </tr>
+          </table>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- GIF animado de código -->
+    <mj-section padding="10px">
+      <mj-column>
+        <mj-image src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHhpczN5c2Z3ZXloNHBmenVmNmZwOHRhZ21sYmZxdWRxcGlzZnd3aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT9IgzoKnwFNmISR8I/giphy.gif" alt="Código animado" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Proyectos destacados -->
+    <mj-section background-color="#ffffff" padding="20px" border-radius="8px">
+      <mj-column>
+        <mj-text font-size="20px" font-weight="700" color="#27ae60">
+          Proyectos destacados
+        </mj-text>
+        <mj-text>
+          <ul>
+            <li><strong style="color:#2c3e50;">[NOMBRE DEL PROYECTO]</strong> - Plataforma de [DESCRIPCIÓN] desarrollada con [TECNOLOGÍAS]</li>
+            <li><strong style="color:#2c3e50;">[NOMBRE DEL PROYECTO]</strong> - Aplicación de [DESCRIPCIÓN] que optimizó [BENEFICIO]</li>
+            <li><strong style="color:#2c3e50;">[NOMBRE DEL PROYECTO]</strong> - Sistema de [DESCRIPCIÓN] que aumentó [MÉTRICA] en un [PORCENTAJE]%</li>
+          </ul>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- CV adjunto y llamada a la acción -->
+    <mj-section background-color="#ffffff" padding="20px" border-radius="8px" >
+      <mj-column>
+        <mj-text font-size="18px" font-weight="700" color="#2c3e50" align="center">
+          Mi currículum completo 📄
+        </mj-text>
+        <mj-text align="center">
+          He adjuntado mi CV detallado para que pueda revisar mi experiencia completa, educación y certificaciones.
+        </mj-text>
+        <mj-button background-color="#27ae60" color="white" border-radius="4px" href="#" font-weight="700">
+          Ver CV adjunto
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Contacto -->
+    <mj-section css-class="dark-bg" padding="20px" >
+      <mj-column>
+        <mj-text font-size="18px" font-weight="700" color="#ffffff" align="center">
+          ¡Conectemos!
+        </mj-text>
+        <mj-social font-size="15px" icon-size="30px" mode="horizontal" align="center">
+          <mj-social-element name="github" href="https://github.com/[TU-USUARIO]" background-color="#27ae60">GitHub</mj-social-element>
+          <mj-social-element name="linkedin" href="https://linkedin.com/in/[TU-USUARIO]" background-color="#27ae60">LinkedIn</mj-social-element>
+        </mj-social>
+        <mj-text color="#ffffff" align="center">
+          📧 [TU-EMAIL@EJEMPLO.COM] | 📱 [TU-TELÉFONO]
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Pie de página -->
+    <mj-section padding="10px">
+      <mj-column>
+        <mj-text font-size="12px" color="#777777" align="center">
+          Agradezco su tiempo y consideración. Quedo a su disposición para cualquier información adicional.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

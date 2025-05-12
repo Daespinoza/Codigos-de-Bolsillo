@@ -1,0 +1,91 @@
+<mjml>
+  <mj-head>
+    <mj-title>Solicitud de Diagnóstico de Currículum - David Espinoza</mj-title>
+    <mj-font name="Roboto" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
+    <mj-attributes>
+      <mj-all font-family="Roboto, Helvetica, Arial, sans-serif" />
+      <mj-text font-weight="400" font-size="16px" color="#000000" line-height="24px" />
+      <mj-section padding="0px" />
+    </mj-attributes>
+    <mj-style>
+      .header-image { border-radius: 8px 8px 0 0; }
+      .profile-image { border-radius: 8px; }
+      .blue-text { color: #0066cc; }
+      .gray-section { background-color: #f5f5f5; }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#ffffff">
+
+    <!-- Encabezado con imagen -->
+    <mj-section css-class="header-image" padding="0px">
+      <mj-column>
+        <mj-image src="https://raw.githubusercontent.com/Daespinoza/Codigos-de-Bolsillo/main/2091417.jpg" alt="Banner de programación" padding="0px" css-class="header-image" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Saludo -->
+    <mj-section padding-top="20px" padding-bottom="0px">
+      <mj-column>
+        <mj-text>
+          <p>Buenos días,</p>
+          <p>Mi nombre es David Espinoza y me pongo en contacto con ustedes porque encontré su página en LinkedIn relacionada con diagnóstico de currículums. Estoy iniciando mi carrera profesional en desarrollo de software y me gustaría mucho recibir una retroalimentación sobre mi CV para mejorar su presentación y contenido.</p>
+        </mj-text>
+      </mj-column>
+      <mj-column width="30%">
+        <mj-image src="https://raw.githubusercontent.com/Daespinoza/Daespinoza/main/RetratoGhibli.jpeg" alt="Foto de perfil" width="150px" css-class="profile-image" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Perfil + imagen -->
+    <mj-section padding-top="20px">
+      <mj-column width="70%">
+        <mj-text>
+          <p>Soy <span class="blue-text">Bachiller en Ingeniería en Computación del Instituto Tecnológico de Costa Rica</span>. Recientemente me gradué y deseo insertarme en el mundo laboral con una base sólida. Durante mis años de estudio desarrollé múltiples proyectos académicos en programación, análisis de código y documentación técnica.</p>
+          <p>Considero que recibir una crítica constructiva a mi currículum puede marcar una gran diferencia en esta etapa inicial.</p>
+        </mj-text>
+      </mj-column>
+      <mj-column width="80%">
+        <mj-image src="https://raw.githubusercontent.com/Daespinoza/Codigos-de-Bolsillo/main/side-shot-code-editor-using-react-js.jpg" alt="Foto de perfil programador" width="500px" css-class="profile-image" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Habilidades -->
+    <mj-section css-class="gray-section" padding="20px" border-radius="8px">
+      <mj-column>
+        <mj-text font-weight="bold" font-size="18px" color="#0066cc">
+          Habilidades técnicas:
+        </mj-text>
+        <mj-text>
+          <ul>
+            <li>Desarrollo en .NET, HTML, CSS y JavaScript</li>
+            <li>Uso de herramientas de documentación como Markdown y Excel</li>
+            <li>Control de versiones con Git y GitHub</li>
+            <li>Análisis de código y resolución de errores</li>
+          </ul>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Botón GitHub -->
+    <mj-section padding-top="20px">
+      <mj-column>
+        <mj-text>
+          <p>Adjunto encontrará mi currículum en formato PDF. También puede conocer más sobre mis proyectos accediendo a mi perfil de GitHub:</p>
+        </mj-text>
+        <mj-button background-color="#0066cc" color="white" border-radius="4px" href="https://github.com/Daespinoza">
+          Visita mi GitHub
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Despedida -->
+    <mj-section padding-top="20px" padding-bottom="20px">
+      <mj-column>
+        <mj-text>
+          <p>Agradezco su tiempo y atención. Quedo atento(a) a cualquier observación o consejo que me puedan ofrecer.</p>
+          <p>Saludos cordiales,</p>
+          <p><strong>David Jose Espinoza Soto</strong><br/>
+          Teléfono: 8662 2013<br/>
+          Email: dev.daespinoza@proton.me<br/>
+          LinkedIn: www.linkedin.com/in/david-jose-espinoza-soto-8a29a5330<br/>
+          GitHub: github.com/Daespinoza

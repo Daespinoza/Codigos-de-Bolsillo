@@ -1,0 +1,110 @@
+<mjml>
+  <mj-head>
+    <mj-title>Propuesta de contacto - Ingeniero en Computación</mj-title>
+    <mj-font name="Roboto" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
+    <mj-attributes>
+      <mj-all font-family="Roboto, Helvetica, Arial, sans-serif" />
+      <mj-text font-weight="400" font-size="16px" color="#000000" line-height="24px" />
+    </mj-attributes>
+    <mj-style>
+      .header-image { border-radius: 8px 8px 0 0; }
+      .red-text { color: #d61c27; }
+      .gray-section { background-color: #f5f5f5; }
+      .separator { background-color: #ffeaea; border-radius: 8px; }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#ffffff">
+
+    <!-- Imagen de cabecera -->
+    <mj-section css-class="header-image" padding="0px">
+      <mj-column>
+        <mj-image src="https://raw.githubusercontent.com/Daespinoza/Codigos-de-Bolsillo/main/2091417.jpg" alt="Banner de correo" padding="0px" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Introducción -->
+    <mj-section padding-top="20px">
+      <mj-column>
+        <mj-text>
+          <p>Estimado equipo del Benemérito Cuerpo de Bomberos de Costa Rica,</p>
+          <p>Mi nombre es <strong>David Espinoza</strong> y soy <span class="red-text">Ingeniero en Computación</span> graduado del Tecnológico de Costa Rica. Recientemente observé una convocatoria para profesionales en informática, aunque llegué tarde para postularme formalmente.</p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Motivación -->
+    <mj-section>
+      <mj-column>
+        <mj-text>
+          <p>Aun así, me gustaría expresar mi interés y disposición para formar parte de futuros proyectos que requieran soporte, análisis o desarrollo en el área tecnológica dentro de su institución. Considero que el trabajo que realizan es vital para el país, y sería un honor contribuir con mis conocimientos desde el área informática.</p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Separador con información personal -->
+    <mj-section css-class="separator" padding="20px">
+      <mj-column width="25%">
+        <mj-image src="https://raw.githubusercontent.com/Daespinoza/Daespinoza/main/RetratoGhibli.jpeg" alt="Foto de David" width="120px" border-radius="8px" />
+      </mj-column>
+      <mj-column width="75%">
+        <mj-text>
+          <p><strong>Sobre mí:</strong></p>
+          <p>Recién graduado del TEC con una sólida base en programación, desarrollo web, documentación técnica, manejo de datos y trabajo colaborativo. Me especializo en HTML, .NET, SQL, C#, y desarrollo de soluciones simples y efectivas.</p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Qué puedo aportar -->
+    <mj-section css-class="gray-section" padding="20px">
+      <mj-column>
+        <mj-text>
+          <p>Estoy preparado para colaborar en tareas como:</p>
+          <ul>
+            <li>Soporte a sistemas existentes</li>
+            <li>Documentación de procesos técnicos</li>
+            <li>Desarrollo de herramientas internas</li>
+            <li>Automatización de flujos o procesos administrativos</li>
+          </ul>
+          <p>Mi enfoque es contribuir con eficiencia y compromiso, en función de las necesidades del equipo de TI o proyectos que estén gestionando.</p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Portafolio -->
+    <mj-section>
+      <mj-column>
+        <mj-text>
+          <p>Pueden ver algunos de mis proyectos personales en el siguiente enlace:</p>
+        </mj-text>
+        <mj-button background-color="#d61c27" color="white" href="https://github.com/Daespinoza" border-radius="4px">
+          Ver mi GitHub
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Cierre -->
+    <mj-section padding-bottom="20px">
+      <mj-column>
+        <mj-text>
+          <p>Les adjunto mi currículum por si desean mantener mis datos para futuras oportunidades. Agradezco de antemano su labor y su tiempo.</p>
+          <p>Quedo a su disposición,</p>
+          <p><strong>David Jose Espinoza Soto</strong><br/>
+          Teléfono: 8662 2013<br/>
+          Email: dev.daespinoza@proton.me<br/>
+          LinkedIn: www.linkedin.com/in/david-jose-espinoza-soto-8a29a5330<br/>
+          GitHub: github.com/Daespinoza</p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Pie -->
+    <mj-section background-color="#f5f5f5">
+      <mj-column>
+        <mj-text font-size="12px" align="center" color="#999999">
+          Este mensaje es una presentación profesional enviada con respeto y admiración por su institución.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>
