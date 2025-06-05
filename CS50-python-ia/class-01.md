@@ -270,49 +270,148 @@ La **Inteligencia Artificial (IA)** es un campo interdisciplinario que busca des
         return grafo
   ```
 
-## 3. Algoritmos de Búsqueda
-### DFS vs. BFS:
+## 3. Algoritmos de Búsqueda Fundamental
+
+### 3.1 DFS vs. BFS: Análisis Comparativo
+
+**Profundización técnica**:
 | **Criterio**       | **DFS**               | **BFS**               |
 |--------------------|-----------------------|-----------------------|
-| Optimalidad        | No garantizada        | Sí (costo uniforme)   |
-| Complejidad espacial | O(bm)                | O(b^d)                |
+| **Optimalidad**    | No garantizada        | Sí (costo uniforme)   |
+| **Compl. Espacial**| O(bm)                | O(b^d)                |
+| **Compl. Temporal**| O(b^m)               | O(b^d)                |
+| **Completitud**    | Solo en espacios finitos | Siempre            |
+| **Uso de memoria** | Lineal (profundidad)  | Exponencial (anchura) |
 
-### A* (A Estrella):
-- **Función de evaluación**: `f(n) = g(n) + h(n)`.
-  - `g(n)`: Costo real desde inicio.
-  - `h(n)`: Heurística admisible (ej: distancia Manhattan).
-- **Teorema de optimalidad**:  
-  Si `h(n)` es admisible, A* encuentra la solución óptima.
+**Selección de algoritmo**:
+```python
+  def seleccionar_algoritmo(problema):
+      if problema.requiere_optimalidad:
+          return BFS
+      elif problema.espacio_amplio:
+          return DFS
+      else:
+          return AEstrella
+```
+
+### 3.2 A* (A Estrella): Búsqueda Informada Óptima
+
+**Componentes clave**:
+1. **Función de evaluación**:
+   - `f(n) = g(n) + h(n)`
+   - ```python
+        def evaluar_a_estrella(nodo):
+          return nodo.costo_real + heuristica(nodo.estado)
+     ```
+
+2. **Condiciones de optimalidad**:
+   - **Admisibilidad**: 
+     `∀n, h(n) ≤ h*(n)`
+   - **Consistencia**:
+     `h(n) ≤ c(n,a,n') + h(n')`
+
+**Casos especiales**:
+- Cuando `h(n) = 0` → Equivalente a UCS
+- Cuando `h(n) = h*(n)` → Expande solo nodos óptimos
 
 ## 4. Búsqueda Adversarial (Minimax)
-### Pseudocódigo:
+
+### 4.1 Algoritmo Minimax
+
+**Pseudocódigo extendido**:
 ```python
-def minimax(estado, profundidad, maximizando):
-    if estado_terminal(estado) or profundidad == 0:
-        return evaluar(estado)
-    if maximizando:
-        return max(minimax(sucesor, profundidad-1, False) for sucesor en sucesores(estado))
-    else:
-        return min(minimax(sucesor, profundidad-1, True) for sucesor en sucesores(estado))
+  def minimax(estado, profundidad, α, β, maximizando):
+      if estado_terminal(estado) or profundidad == 0:
+          return evaluar(estado), None
+      
+      mejor_valor = -∞ if maximizando else ∞
+      mejor_accion = None
+      
+      for accion in acciones(estado):
+          nuevo_estado = resultado(estado, accion)
+          valor, _ = minimax(nuevo_estado, profundidad-1, α, β, not maximizando)
+          
+          if maximizando and valor > mejor_valor:
+              mejor_valor = valor
+              mejor_accion = accion
+              α = max(α, valor)
+          elif (not maximizando) and valor < mejor_valor:
+              mejor_valor = valor
+              mejor_accion = accion
+              β = min(β, valor)
+          
+          if α >= β:
+              break
+      
+      return mejor_valor, mejor_accion
 ```
-### Poda Alfa-Beta:
-- **Condición de poda**:  
-  Si `α ≥ β`, descarta subárbol.
-- **Mejor caso**: Reduce complejidad a `O(b^(d/2))`.
+
+### 4.2 Poda Alfa-Beta: Optimización Crítica
+
+**Mecanismo de poda**:
+1. **α**: Mejor valor encontrado para MAX
+2. **β**: Mejor valor encontrado para MIN
+3. **Condición de poda**:
+   - Ramas MAX: Si valor ≥ β
+   - Ramas MIN: Si valor ≤ α
+
+**Eficiencia**:
+| Escenario        | Complejidad       | Nodos evaluados |
+|------------------|-------------------|-----------------|
+| Peor caso        | O(b^d)            | 100%            |
+| Mejor caso       | O(b^(d/2))        | ~50%            |
+| Orden óptimo     | O(b^(d/3))        | ~30%            |
 
 ## 5. Demostraciones Técnicas
-### Optimalidad de A*:
-1. Sea `C*` costo óptimo al objetivo.
-2. Para todo nodo `n` en frontera:  
-   `f(n) = g(n) + h(n) ≤ C*` (por admisibilidad).
-3. A* expande nodos en orden de `f(n)` → primer objetivo alcanzado es óptimo.
 
-### Consistencia en Heurísticas:
-- **Definición**:  
-  `h(n) ≤ c(n, n') + h(n')` para todo `n'` sucesor de `n`.
-- **Implicación**:  
-  Garantiza que `f(n)` sea no decreciente en cualquier trayectoria.
+### 5.1 Demostración Formal de Optimalidad en A*
+
+**Teorema**:
+Si h(n) es admisible, A* encuentra solución óptima.
+
+**Pasos**:
+1. Sea C* costo óptimo
+2. Para todo nodo n en camino óptimo:
+   f(n) = g(n) + h(n) ≤ C*
+3. Para nodos subóptimos n':
+   f(n') = g(n') + h(n') > C*
+4. ∴ A* expande primero nodos del camino óptimo
+
+### 5.2 Consistencia de Heurísticas
+
+**Teorema**:
+h(n) es consistente si:
+∀n,n', h(n) ≤ c(n,a,n') + h(n')
+
+**Corolario**:
+- Garantiza monotonía de f(n)
+- Implica admisibilidad
+- A* nunca reabre nodos
 
 ## 6. Aplicaciones Críticas
-- **Google Maps**: A* con heurística de tiempo real.
-- **DeepBlue (Ajedrez)**: Minimax + poda alfa-beta + evaluación de 8M posiciones/segundo.
+
+### 6.1 Sistemas de Navegación (Google Maps)
+**Implementación típica**:
+```python
+  def navegacion_a_estrella(origen, destino):
+      frontera = PriorityQueue()
+      frontera.put(origen, heuristica(origen, destino))
+      while not frontera.empty():
+          actual = frontera.get()
+          if actual == destino:
+              return reconstruir_ruta()
+          for vecino in grafo.vecinos(actual):
+              nuevo_costo = costo[actual] + distancia(actual, vecino)
+              if nuevo_costo < costo[vecino]:
+                  costo[vecino] = nuevo_costo
+                  prioridad = nuevo_costo + heuristica(vecino, destino)
+                  frontera.put(vecino, prioridad)
+```
+
+### 6.2 Sistemas de Juegos (DeepBlue)
+**Pipeline de procesamiento**:
+1. Generación de movimientos → 2. Poda alfa-beta → 3. Evaluación heurística
+**Métricas clave**:
+- Profundidad de búsqueda: 6-40 ply
+- Velocidad: 200 millones de nodos/segundo
+- Función eval: 8000+ parámetros
