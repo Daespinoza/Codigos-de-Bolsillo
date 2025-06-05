@@ -128,8 +128,8 @@ La **Inteligencia Artificial (IA)** es un campo interdisciplinario que busca des
 
 #### 2.1.2 Acciones
 - **Propiedades clave**:
-  - **Completitud**: ∀s ∈ S, A(s) ≠ ∅ (siempre existe al menos una acción disponible)
-  - **Reversibilidad**: Algunos problemas requieren ∀a ∃a⁻¹ | T(T(s,a),a⁻¹) = s
+  - **Completitud**: `∀s ∈ S, A(s) ≠ ∅` (siempre existe al menos una acción disponible)
+  - **Reversibilidad**: Algunos problemas requieren `∀a ∃a⁻¹ | T(T(s,a),a⁻¹) = s`
 
 - **Ejemplo avanzado (15-puzzle)**:
   ```python
@@ -209,7 +209,7 @@ La **Inteligencia Artificial (IA)** es un campo interdisciplinario que busca des
 #### 2.2.1 Por Complejidad del Espacio de Estados
 | Tipo                | Características                  | Complejidad Típica   | Ejemplo                 |
 |---------------------|----------------------------------|----------------------|-------------------------|
-| **Discreto Finito** | Espacio enumerable               | O(b^d)               | 8-puzzle                |
+| **Discreto Finito** | Espacio enumerable               | `O(b^d)`               | 8-puzzle                |
 | **Continuo**        | Espacio no numerable             | NP-Hard              | Navegación robótica      |
 | **Relacional**      | Estados definidos por predicados | EXPTIME              | Planificación automática |
 
@@ -242,8 +242,8 @@ La **Inteligencia Artificial (IA)** es un campo interdisciplinario que busca des
 ### 2.3 Métricas de Rendimiento
 | Métrica               | Fórmula                  | Aplicación           |
 |-----------------------|--------------------------|----------------------|
-| **Completitud**       | P(solucion) = 1          | Entornos deterministas |
-| **Optimalidad**       | C(π) = C*(π)             | Sistemas críticos     |
+| **Completitud**       | `P(solucion) = 1`          | Entornos deterministas |
+| **Optimalidad**       | `C(π) = C*(π)`             | Sistemas críticos     |
 | **Eficiencia**        | Nodos expandidos/sol     | Comparación algoritmos|
 
 ### 2.4 Casos de Estudio Avanzados
@@ -278,8 +278,8 @@ La **Inteligencia Artificial (IA)** es un campo interdisciplinario que busca des
 | **Criterio**       | **DFS**               | **BFS**               |
 |--------------------|-----------------------|-----------------------|
 | **Optimalidad**    | No garantizada        | Sí (costo uniforme)   |
-| **Compl. Espacial**| O(bm)                | O(b^d)                |
-| **Compl. Temporal**| O(b^m)               | O(b^d)                |
+| **Compl. Espacial**| `O(bm)`                | `O(b^d)`                |
+| **Compl. Temporal**| `O(b^m)`               | `O(b^d)`                |
 | **Completitud**    | Solo en espacios finitos | Siempre            |
 | **Uso de memoria** | Lineal (profundidad)  | Exponencial (anchura) |
 
@@ -358,9 +358,9 @@ La **Inteligencia Artificial (IA)** es un campo interdisciplinario que busca des
 **Eficiencia**:
 | Escenario        | Complejidad       | Nodos evaluados |
 |------------------|-------------------|-----------------|
-| Peor caso        | O(b^d)            | 100%            |
-| Mejor caso       | O(b^(d/2))        | ~50%            |
-| Orden óptimo     | O(b^(d/3))        | ~30%            |
+| Peor caso        | `O(b^d)`            | 100%            |
+| Mejor caso       | `O(b^(d/2))`        | ~50%            |
+| Orden óptimo     | `O(b^(d/3))`        | ~30%            |
 
 ## 5. Demostraciones Técnicas
 
@@ -372,16 +372,16 @@ Si h(n) es admisible, A* encuentra solución óptima.
 **Pasos**:
 1. Sea C* costo óptimo
 2. Para todo nodo n en camino óptimo:
-   f(n) = g(n) + h(n) ≤ C*
+   `f(n) = g(n) + h(n) ≤ C*`
 3. Para nodos subóptimos n':
-   f(n') = g(n') + h(n') > C*
-4. ∴ A* expande primero nodos del camino óptimo
+   `f(n') = g(n') + h(n') > C*`
+4. `∴ A*` expande primero nodos del camino óptimo
 
 ### 5.2 Consistencia de Heurísticas
 
 **Teorema**:
 h(n) es consistente si:
-∀n,n', h(n) ≤ c(n,a,n') + h(n')
+`∀n,n', h(n) ≤ c(n,a,n') + h(n')`
 
 **Corolario**:
 - Garantiza monotonía de f(n)
